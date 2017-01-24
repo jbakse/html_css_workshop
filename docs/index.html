@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML+CSS Basics</title>
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
+		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
+
+		<link rel="stylesheet" type="text/css" href="/styles/atelier-health.light.css">
+		<link rel="stylesheet" type="text/css" href="/styles/main.css">
+		<script type="text/javascript">
+			var base_url = "/";
+		</script>
+
+		<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+	</head>
+	<body id="compform" class="show-toc">
+
+		<div class="side-bar">
+			<div class="top-bar">
+				<a href="..">Comp Form</a>
+				<span class="title">HTML+CSS Basics</span>
+			</div>
+			<div class="js-toc"></div>
+		</div>
+		<!-- title: HTML+CSS Basics -->
+		<div class="container">
+			<h1>HTML+CSS Basics</h1>
+<p>The HTML+CSS Basics Workshop is a one-day introduction to creating web content. This class will focus on practical, technical skills with hands-on challenges and lots of time to practice and ask questions. Topics will include writing basic HTML and CSS, working with images and links, finding answers online, and using the development tools built into chrome.</p>
+<table>
+<thead>
+<tr><th>Time</th><th>Unit</th></tr>
+</thead>
+<tbody>
+<tr><td>10:30</td><td>Semantic Markup: How HTML and CSS work together</td></tr>
+<tr><td>11:00</td><td>HTML: Marking up a web page</td></tr>
+<tr><td>12:15</td><td>Documentation: How to find answers</td></tr>
+<tr><td><em>1:00</em></td><td><em>Lunch</em></td></tr>
+<tr><td>1:45</td><td>CSS: Styling a web page</td></tr>
+<tr><td>3:00</td><td>Using the Chrome developer tools</td></tr>
+<tr><td>3:30</td><td>Using Atom and Working Locally</td></tr>
+<tr><td>4:00</td><td>Links, Images, Paths</td></tr>
+<tr><td><em>5:15</em></td><td><em>End of Class</em></td></tr>
+</tbody>
+</table>
+<h2>Workshop Structure</h2>
+<ul>
+<li>This workshop is divided into several parts. Each part begins with a brief introduction, followed by a hands-on exercise.</li>
+<li>If you get done early, keep exploring. If you don’t get done, don’t worry.</li>
+<li>At the end of each exercise we’ll show and discuss an ‘expert’ solution.</li>
+<li>We will stick to the practical aspects; we won’t get into the technical background.</li>
+<li>We will stick to the very high-level basics, focusing on how everything works together.</li>
+<li>A lot of important topics <strong>won’t</strong> be covered: changing fonts, controlling box layout, etc.</li>
+<li>Fortunately, we <strong>will</strong> cover how to look that stuff up later.</li>
+</ul>
+<h2>Semantic Markup: How HTML and CSS work together</h2>
+<h3>Learning Objectives</h3>
+<ul>
+<li>What semantic markup is</li>
+<li>How HTML and CSS work together</li>
+<li>Practice identifying semantic structure of a document</li>
+</ul>
+<h3>Overview</h3>
+<p>In documents, different words have different purposes. Some words form titles, some words form regular paragraphs, some are parts of lists. In web development these purposes are referred to as <em>semantics</em>. Often the semantic purpose of text informs how it should be styled. Title text is often bigger than paragraph text. Lists may be indented.</p>
+<p>HTML and CSS are used together to explain the semantics of documents how they should look. HTML is used to describe the semantics of the document in a way that a web browser can understand. CSS is used to set style properties such as the font size and color to associate with different types of content.</p>
+<p>If you want to make all the lists on a web page red, you need to use HTML to “mark up” where the lists are, and CSS to color them.</p>
+<h3>More Information</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Semantic_HTML">Wikipedia: Semantic HTML</a></li>
+<li><a href="http://html5doctor.com/lets-talk-about-semantics/">HTML5Doctor: Let’s Talk about Semantics</a></li>
+</ul>
+<h3>Challenge</h3>
+<p>[students (partners?) highlight content on printouts, label with semantic descriptions]
+[one authentic material, one is what is coming up next]
+[10 min]</p>
+<h2>HTML: Marking up a web page</h2>
+<h3>Learning Objectives</h3>
+<ul>
+<li>What HTML is</li>
+<li>HTML tag syntax</li>
+<li>Common HTML tags and semantic meaning</li>
+<li>Practice using HTML to mark up text documents</li>
+</ul>
+<h3>Overview</h3>
+<p>HTML stands for HyperText Markup Language. It is used to provide information about the structure, organization, and purpose of content on a web page.</p>
+<p>Properly marked up content can be understood by the web browser, allowing it to style the document way you want. Styles are defined in a separate language called CSS.</p>
+<table>
+<thead>
+<tr><th>HTML</th><th>CSS</th><th>Javascript</th></tr>
+</thead>
+<tbody>
+<tr><td>Content</td><td>Style</td><td>Behavior</td></tr>
+<tr><td>What it says</td><td>What it looks like</td><td>What it does</td></tr>
+</tbody>
+</table>
+<h4>HTML Syntax</h4>
+<p>Here is an example of a very basic HTML web page.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>HTML Basics<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello, world.<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is a basic web page.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>A few things to note in the above example:</p>
+<ul>
+<li>HTML uses tags (like <code>&lt;h1&gt;</code>) to mark up the purpose of text in a document.</li>
+<li>Most HTML tags work in pairs and surround the text they describe: <code>&lt;h1&gt;...&lt;/h1&gt;</code></li>
+<li>Opening tags look like this: <code>&lt;h1&gt;</code> and <code>&lt;body&gt;</code> and <code>&lt;p&gt;</code></li>
+<li>Closing tags look like this: <code>&lt;/h1&gt;</code> and <code>&lt;/body&gt;</code> and <code>&lt;/p&gt;</code></li>
+<li>Tags can be nested: <code>&lt;h1&gt;</code> is  inside <code>&lt;body&gt;</code> and <code>&lt;body&gt;</code> is inside <code>&lt;html&gt;</code></li>
+</ul>
+<h4>Important HTML Tags</h4>
+<table>
+<thead>
+<tr><th>Tag</th><th>Purpose</th></tr>
+</thead>
+<tbody>
+<tr><td></td></tr>
+<tr><td><code>html</code></td><td>wraps the entire document</td></tr>
+<tr><td><code>head</code></td><td>used to contain information that is not displayed on the web page</td></tr>
+<tr><td><code>title</code></td><td>used to mark text that should be displayed in the document’s tab (and bookmarks)</td></tr>
+<tr><td><code>body</code></td><td>used to mark the main content of the document</td></tr>
+<tr><td></td></tr>
+<tr><td><code>h1</code></td><td>Headlines</td></tr>
+<tr><td><code>h2</code>…<code>h6</code></td><td>Less important headlines</td></tr>
+<tr><td><code>p</code></td><td>Paragraphs</td></tr>
+<tr><td></td></tr>
+<tr><td><code>ol</code></td><td>A numbered list</td></tr>
+<tr><td><code>ul</code></td><td>An unnumbered list</td></tr>
+<tr><td><code>li</code></td><td>An item in a list</td></tr>
+<tr><td></td></tr>
+<tr><td><code>em</code></td><td><em>emphasized text</em></td></tr>
+<tr><td><code>strong</code></td><td><strong>strong text</strong></td></tr>
+<tr><td><code>code</code></td><td><code>code text</code></td></tr>
+</tbody>
+</table>
+<h3>More Information</h3>
+<ul>
+<li><a href="http://learn.shayhowe.com/html-css/">Learn to Code HTML &amp; CSS</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN: HTML</a></li>
+</ul>
+<h3>Challenge</h3>
+<p>[students start with provided text and add html tags, using the browser’s default stylesheet to match provided goal]
+[30 min (could be less?)]</p>
+<h2>Documentation: How to find answers</h2>
+<h3>Learning Objectives</h3>
+<ul>
+<li>Using Google to find technical information</li>
+<li>High-quality reference sites</li>
+<li>Practice finding information</li>
+</ul>
+<h3>Overview</h3>
+<p>Webpages are built with three programming languages (HTML, CSS, and Javascript) and run on a variety of web browsers each with their own quirks. That is a lot of information to try to remember, and web technologies are constantly changing and growing. Finding technical answers online quickly is one of the most important skills required when making webpages.</p>
+<p>Like any skill, you get better at searching for info when you practice.</p>
+<h3>Tips for using Google for Technical Information</h3>
+<ul>
+<li>Include the language in your search. <code>rounded corner</code> -&gt; <code>rounded corner css</code></li>
+<li>Include a reputable site in your search. <code>border properties</code> -&gt; <code>border properties mdn</code></li>
+<li>If the first few results are not what you are looking for, try a different search. <code>dotted line css</code> -&gt; <code>dotted border css</code></li>
+<li>Scan the first few results before you click.</li>
+<li>Look for titles that closely match what you are looking for.</li>
+<li>Look for sources that have been useful before.</li>
+<li>Don’t forget that your browser can search for terms on a page: <code>command-f</code></li>
+<li>Most common info can be found quickly. If you are not obviously on the right webpage for your answer, don’t spend time on it. Go back to the search results and pick something else, or try rephrasing your search.</li>
+<li>Don’t always use google. If you are looking for info on a particular HTML tag, CSS attribute, or JS function, a tool like devdocs.io might be better.</li>
+</ul>
+<h4>Good sources of info</h4>
+<table>
+<thead>
+<tr><th>Site</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="http://devdocs.io/">DevDocs</a></td><td>Online reference application with info for <em>many</em> popular web technologies.</td></tr>
+<tr><td><a href="http://stackoverflow.com/">Stack Overflow</a></td><td>Question and answer site with huge, well-curated database</td></tr>
+<tr><td><a href="https://developer.mozilla.org/en-US/">MDN</a></td><td>Detailed, reliable technical documentation on HTML/CSS/Javascript and other web technologies.</td></tr>
+<tr><td><a href="https://www.html5rocks.com/en/">HTML5Rocks</a></td><td>Tutorials and articles on specific aspects of HTML5</td></tr>
+<tr><td><a href="https://css-tricks.com/">CSSTricks</a></td><td>Tutorials, quick reference, and other resources related to CSS</td></tr>
+</tbody>
+</table>
+<h4>Challenge</h4>
+<p>[Part 1: Students complete longer, “open web” quiz. They will be expected to need to search reference sites to find answers. Questions will range from specific to vague, with some demanding specific answers, others requesting links to tutorials on particular layouts, or links to answers to common problems.]
+[Part 2: Students will start with html that needs to be updated to match a provided rendering and must figure out how to do it]
+[20 min]</p>
+<h2>Lunch</h2>
+<h2>CSS: Styling a web page</h2>
+<h3>Learning Objectives</h3>
+<ul>
+<li>What CSS is</li>
+<li>CSS rule-set syntax</li>
+<li>Common CSS properties</li>
+<li>Practice using CSS to style html documents</li>
+</ul>
+<h3>Overview</h3>
+<p>CSS stands for Cascading Style Sheets. CSS is used to describe presentation styles for elements on a web page. CSS allows you to specify the size and color of text, borders, shadows, even the overall layout of the page.</p>
+<table>
+<thead>
+<tr><th>HTML</th><th>CSS</th><th>Javascript</th></tr>
+</thead>
+<tbody>
+<tr><td>Content</td><td>Style</td><td>Behavior</td></tr>
+<tr><td>What it says</td><td>What it looks like</td><td>What it does</td></tr>
+</tbody>
+</table>
+<h4>CSS Syntax</h4>
+<p>Here is an example of a CSS <strong>ruleset</strong>. This ruleset tells the browser to make all the <code>&lt;h1&gt;</code> elements on the webpage <strong>big</strong> and <strong>red</strong>.</p>
+<pre><code class="language-html">h1 {
+    font-size: 50px;
+    color: red;
+}
+</code></pre>
+<p>A few things to note about this ruleset:</p>
+<ul>
+<li>Rulesets begin with a <strong>selector</strong>. The selector above is <code>h1</code>. This selector tells css that the following styles should be applied to any <code>h1</code> elements on the page.</li>
+<li>Rulesets may have more than one selector, separated with commas: <code>h1, h2</code></li>
+<li>After the selector a pair of braces <code>{}</code> group two <strong>declarations</strong>.</li>
+<li>Declarations begin with a <strong>property</strong>: <code>color</code>;</li>
+<li>… continue with a <code>:</code></li>
+<li>… followed by a <strong>value</strong>: <code>red</code></li>
+<li>… and end with <code>;</code></li>
+</ul>
+<h4>Important CSS Properties</h4>
+<table>
+<thead>
+<tr><th>Tag</th><th>Example Values</th><th>Purpose</th></tr>
+</thead>
+<tbody>
+<tr><td><code>color</code></td><td><code>red</code> <code>#00FF00</code></td><td>Sets the font color</td></tr>
+<tr><td><code>background-color</code></td><td><code>red</code> <code>#00FF00</code></td><td>Sets the background color</td></tr>
+<tr><td><code>font-size</code></td><td><code>12px</code> <code>2em</code></td><td>Sets the size of the font</td></tr>
+<tr><td><code>font-weight</code></td><td><code>bold</code> <code>normal</code></td><td>The font weight</td></tr>
+</tbody>
+</table>
+<h4>Inheritance</h4>
+<p>When a CSS property is applied to an element, it may be applied to the elements nested children as well. This is called <strong>inheritance</strong>.</p>
+<p>In the following example, the color property will be applied to the <code>p</code> element. The <code>strong</code> element’s text will also be red because the color property is inherited.</p>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This paragraph has a <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>bold part<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<pre><code><span class="hljs-selector-tag">p</span> { <span class="hljs-attribute">color</span>: red; }
+</code></pre>
+<p>Not all CSS properties are inherited. You can check the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">MDN CSS reference</a> to find out if a property is inherited.</p>
+<h4>Classes</h4>
+<p>Generally it good CSS practice to apply styles broadly. For example, you might make all <code>h1</code>s look a certain way. This leads to shorter, easier to understand CSS and more consistent visual design. In practice, however, you often need to get more specific. You might want a few <code>h1</code>s to be a different color for example.</p>
+<p>You can use HTML and CSS together to create <strong>classes</strong> that let you specify a specific set of elements.</p>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Apples<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Apples are fruit.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fancy"</span>&gt;</span>Bears<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Apples are animals.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Cake<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fancy"</span>&gt;</span>Cake is delicious.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<pre><code><span class="hljs-selector-tag">h1</span> {
+    <span class="hljs-attribute">color</span>: gray;
+}
+<span class="hljs-selector-class">.fancy</span> {
+    <span class="hljs-attribute">color</span>: pink;
+}
+</code></pre>
+<ul>
+<li>In the HTML, a class <strong>attribute</strong> was added to two tags in the HTML.</li>
+<li>In the CSS, a selector starting with <code>.</code> is used to apply a ruleset to elements marked with the <code>fancy</code> class.</li>
+</ul>
+<h4>Specificity</h4>
+<p>It is common that two rulesets will apply to the same element. In the example above, both the <code>h1</code> ruleset and the the <code>.fancy</code> ruleset apply to the “Bears” header. Since both rulesets set the <code>color</code> property, css must choose which property value to use. CSS gives priority to the more <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance">specific</a> selector’s rule. CSS considers class selectors to be more specific than element selectors, so the fancy header ends up pink.</p>
+<p>Understanding how CSS assigns priority is important as your projects grow more complex. Take a look at some of the linked resources for more detailed information.</p>
+<h3>More Information</h3>
+<ul>
+<li><a href="http://learn.shayhowe.com/html-css/">Learn to Code HTML &amp; CSS</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">MDN: CSS</a></li>
+</ul>
+<h3>Challenge</h3>
+<p>[Students start with marked up html, add css to match provided rendering]
+[30 min]</p>
+<h2>Using the Chrome development tools</h2>
+<h3>Learning Objectives</h3>
+<ul>
+<li>What the Chrome Developer Tools are</li>
+<li>How to access and use the element inspector</li>
+</ul>
+<h3>Overview</h3>
+<p>Chrome has a powerful set of built-in tools for web developers. Using these tools you can better understand how the browser interprets your HTML and CSS, see how long it takes to load each part of your page, and debug problems.</p>
+<p>When working with HTML and CSS the Elements panel is very useful. This panel shows you which CSS rulesets the browser is using for each element. To inspect an element, you can right click on it and choose “Inspect” from the pop-up menu.</p>
+<p>The left side of the Elements panel shows the structure of your HTML. The right side shows all the rulesets that are applied to the selected element. This view shows where each ruleset is defined and which properties are overridden by other rulesets.</p>
+<p>You can even add temporary CSS declarations from the DevTools to quickly try out possible styles.</p>
+<h3>More Information</h3>
+<ul>
+<li><a href="https://developer.chrome.com/devtools">Chrome DevTools Overview</a></li>
+</ul>
+<h3>Challenge</h3>
+<p>[Students answer questions about the semantic structure, class names, style options, etc of popular websites.]
+[Extra: Students change the content and style of popular websites. Checklist of tasks.]
+[15 minutes]</p>
+<h2>Using Atom and Working Locally</h2>
+<h3>Learning Objectives</h3>
+<ul>
+<li>Install a text editor</li>
+<li>Text editors vs word processors</li>
+<li>Creating a web page from scratch.</li>
+<li>Viewing a local web page in Chrome.</li>
+</ul>
+<h3>Overview</h3>
+<ul>
+<li>Text editors vs word processors</li>
+<li>Where to get Atom</li>
+<li>Favorite Add ons</li>
+<li>Creating a web page from scratch.</li>
+<li>Viewing a local web page in Chrome.</li>
+<li>Moving to a Local Server (just a heads up)</li>
+</ul>
+<h3>More Information</h3>
+<ul>
+<li>Atom</li>
+<li>Working Locally</li>
+</ul>
+<h3>Challenge</h3>
+<p>[Students create a local stub html file, view in browser, match provided goal]
+[15 min]</p>
+<h2>Links, Images, Paths</h2>
+<h3>Learning Objectives</h3>
+<ul>
+<li>How to create hyperlinks</li>
+<li>Linking to a CSS file</li>
+<li>How to embed images</li>
+<li>Understanding relative and absolute paths</li>
+</ul>
+<h3>Overview</h3>
+<ul>
+<li>How to create hyperlinks</li>
+<li>Linking to a CSS file</li>
+<li>How to embed images</li>
+<li>Understanding relative and absolute paths</li>
+</ul>
+<h3>More Information</h3>
+<h3>Challenge</h3>
+<p>[students continue with the html created in previous challenge, adding styles, images, links to match provided goal part 2]
+[30 min]</p>
+<style>
+    .hljs-tag {
+        color: #003399;
+    }
+    .hljs-name {
+        color: #0033FF;
+    }
+    h2 {
+        margin-top: 4em;
+    }
+</style>
+
+		</div>
+
+		<script type="text/javascript" src="/javascript/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/javascript/highlight.pack.js"></script>
+		<script type="text/javascript" src="/javascript/p5_example.js"></script>
+		<script src="/tocbot/tocbot.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				$("table").addClass("table table-bordered");
+			});
+			$("h1, h2, h3, h4").each(function (i) {
+				$(this).attr("id", "h_" + i);
+
+			});
+
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.show-toc .js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.container',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3',
+				collapseDepth: 2
+			});
+		</script>
+	</body>
+</html>
