@@ -29,6 +29,7 @@ Time 	| Unit
 - We will stick to the very high-level basics, focusing on how everything works together.
 - A lot of important topics **won't** be covered: changing fonts, controlling box layout, etc.
 - Fortunately, we **will** cover how to look that stuff up later.
+- Inductive vs Inductive approach
 
 ## Semantic Markup: How HTML and CSS work together
 
@@ -90,6 +91,7 @@ What it says	| What it looks like 	| What it does
 Here is an example of a very basic HTML web page.
 
 ```html
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>HTML Basics</title>
@@ -132,13 +134,21 @@ Tag     | Purpose
 `code`      | `code text`
 
 
+### Important Note
+In interesting feature of HTML is that browsers will try _very_ hard to show your document, even if there are mistakes in your HTML. In some ways this makes it easier to user and learn HTML: a simple mistake won't bring your whole page down. In other ways it makes it harder to learn and use: you don't get clear, immediate feedback when you make a mistake.
+
 ### More Information
 - [Learn to Code HTML & CSS](http://learn.shayhowe.com/html-css/)
 - [MDN: HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
 ### Challenge
-[students start with provided text and add html tags, using the browser's default stylesheet to match provided goal]
-[30 min (could be less?)]
+Open the "challenge" link below. Add HTML tags to mark up the semantic structure of the text. Try to make the rendered HTML match the "goal" link below. 
+
+[Challenge](https://jsbin.com/maronimafi/edit?html,output)
+->
+[Goal](challenges/challenge_html_solution.html)
+
+
 
 
 

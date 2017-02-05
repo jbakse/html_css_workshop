@@ -52,6 +52,7 @@
 <li>We will stick to the very high-level basics, focusing on how everything works together.</li>
 <li>A lot of important topics <strong>won’t</strong> be covered: changing fonts, controlling box layout, etc.</li>
 <li>Fortunately, we <strong>will</strong> cover how to look that stuff up later.</li>
+<li>Inductive vs Inductive approach</li>
 </ul>
 <h2>Semantic Markup: How HTML and CSS work together</h2>
 <h3>Learning Objectives</h3>
@@ -95,7 +96,8 @@
 </table>
 <h4>HTML Syntax</h4>
 <p>Here is an example of a very basic HTML web page.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>HTML Basics<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
@@ -138,14 +140,18 @@
 <tr><td><code>code</code></td><td><code>code text</code></td></tr>
 </tbody>
 </table>
+<h3>Important Note</h3>
+<p>In interesting feature of HTML is that browsers will try <em>very</em> hard to show your document, even if there are mistakes in your HTML. In some ways this makes it easier to user and learn HTML: a simple mistake won’t bring your whole page down. In other ways it makes it harder to learn and use: you don’t get clear, immediate feedback when you make a mistake.</p>
 <h3>More Information</h3>
 <ul>
 <li><a href="http://learn.shayhowe.com/html-css/">Learn to Code HTML &amp; CSS</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN: HTML</a></li>
 </ul>
 <h3>Challenge</h3>
-<p>[students start with provided text and add html tags, using the browser’s default stylesheet to match provided goal]
-[30 min (could be less?)]</p>
+<p>Open the “challenge” link below. Add HTML tags to mark up the semantic structure of the text. Try to make the rendered HTML match the “goal” link below.</p>
+<p><a href="https://jsbin.com/maronimafi/edit?html,output">Challenge</a>
+-&gt;
+<a href="challenges/challenge_html_solution.html">Goal</a></p>
 <h2>Documentation: How to find answers</h2>
 <h3>Learning Objectives</h3>
 <ul>
