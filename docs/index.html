@@ -104,6 +104,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello, world.<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is a basic web page.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"kitten.jpg"</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
@@ -114,6 +115,7 @@
 <li>Opening tags look like this: <code>&lt;h1&gt;</code> and <code>&lt;body&gt;</code> and <code>&lt;p&gt;</code></li>
 <li>Closing tags look like this: <code>&lt;/h1&gt;</code> and <code>&lt;/body&gt;</code> and <code>&lt;/p&gt;</code></li>
 <li>Tags can be nested: <code>&lt;h1&gt;</code> is  inside <code>&lt;body&gt;</code> and <code>&lt;body&gt;</code> is inside <code>&lt;html&gt;</code></li>
+<li>Some tags, such as <code>&lt;br&gt;</code> and <code>&lt;img&gt;</code>, insert content into a page. Because these tags no not enclose content, they do not have a closing tag.</li>
 </ul>
 <h4>Important HTML Tags</h4>
 <table>
@@ -130,6 +132,7 @@
 <tr><td><code>h1</code></td><td>Headlines</td></tr>
 <tr><td><code>h2</code>…<code>h6</code></td><td>Less important headlines</td></tr>
 <tr><td><code>p</code></td><td>Paragraphs</td></tr>
+<tr><td><code>br</code></td><td>Creates a line break without starting a new paragraph (unpaired)</td></tr>
 <tr><td></td></tr>
 <tr><td><code>ol</code></td><td>A numbered list</td></tr>
 <tr><td><code>ul</code></td><td>An unnumbered list</td></tr>
@@ -138,6 +141,10 @@
 <tr><td><code>em</code></td><td><em>emphasized text</em></td></tr>
 <tr><td><code>strong</code></td><td><strong>strong text</strong></td></tr>
 <tr><td><code>code</code></td><td><code>code text</code></td></tr>
+<tr><td><code>blockquote</code></td><td>Extended quotation</td></tr>
+<tr><td></td></tr>
+<tr><td><code>a</code></td><td>creates a link</td></tr>
+<tr><td><code>img</code></td><td>inserts an image (unpaired)</td></tr>
 </tbody>
 </table>
 <h3>Important Note</h3>
@@ -148,7 +155,11 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN: HTML</a></li>
 </ul>
 <h3>Challenge</h3>
-<p>Open the “challenge” link below. Add HTML tags to mark up the semantic structure of the text. Try to make the rendered HTML match the “goal” link below.</p>
+<ul>
+<li>Open the “challenge” link below.</li>
+<li>Add HTML tags to mark up the semantic structure of the text.</li>
+<li>Try to make the rendered HTML match the “goal” link below.</li>
+</ul>
 <p><a href="https://jsbin.com/maronimafi/edit?html,output">Challenge</a>
 -&gt;
 <a href="challenges/challenge_html_solution.html">Goal</a></p>
@@ -188,9 +199,12 @@
 </tbody>
 </table>
 <h4>Challenge</h4>
-<p>[Part 1: Students complete longer, “open web” quiz. They will be expected to need to search reference sites to find answers. Questions will range from specific to vague, with some demanding specific answers, others requesting links to tutorials on particular layouts, or links to answers to common problems.]
-[Part 2: Students will start with html that needs to be updated to match a provided rendering and must figure out how to do it]
-[20 min]</p>
+<ul>
+<li>Answer the questions in the quiz linked below.</li>
+<li>This is an open-web quiz; you may use any website you like to find answers to the quiz questions.</li>
+<li>If you have extra time, spend some time reading up on topics included in the quiz.</li>
+</ul>
+<p><a href="https://goo.gl/forms/3N8oY4Vx0IPILUNK2">Finding Answers Quiz</a></p>
 <h2>Lunch</h2>
 <h2>CSS: Styling a web page</h2>
 <h3>Learning Objectives</h3>
@@ -212,13 +226,27 @@
 </tbody>
 </table>
 <h4>CSS Syntax</h4>
-<p>Here is an example of a CSS <strong>ruleset</strong>. This ruleset tells the browser to make all the <code>&lt;h1&gt;</code> elements on the webpage <strong>big</strong> and <strong>red</strong>.</p>
+<p>First, lets look at some css:</p>
+<pre><code class="language-html">h1 {
+    font-size: 50px;
+    color: red;
+}
+
+h2, h3 {
+    font-size: 25px;
+}
+
+h3 {
+    color: blue;
+}
+</code></pre>
+<p>The example above has three <strong>rulesets</strong>. Lets look at the first one more closely:</p>
 <pre><code class="language-html">h1 {
     font-size: 50px;
     color: red;
 }
 </code></pre>
-<p>A few things to note about this ruleset:</p>
+<p>This ruleset tells the browser to make all the <code>&lt;h1&gt;</code> elements on the webpage <strong>big</strong> and <strong>red</strong>. A few things to note about rulesets:</p>
 <ul>
 <li>Rulesets begin with a <strong>selector</strong>. The selector above is <code>h1</code>. This selector tells css that the following styles should be applied to any <code>h1</code> elements on the page.</li>
 <li>Rulesets may have more than one selector, separated with commas: <code>h1, h2</code></li>
@@ -236,10 +264,18 @@
 <tbody>
 <tr><td><code>color</code></td><td><code>red</code> <code>#00FF00</code></td><td>Sets the font color</td></tr>
 <tr><td><code>background-color</code></td><td><code>red</code> <code>#00FF00</code></td><td>Sets the background color</td></tr>
+<tr><td></td></tr>
 <tr><td><code>font-size</code></td><td><code>12px</code> <code>2em</code></td><td>Sets the size of the font</td></tr>
 <tr><td><code>font-weight</code></td><td><code>bold</code> <code>normal</code></td><td>The font weight</td></tr>
+<tr><td><code>font-style</code></td><td><code>italic</code> <code>normal</code></td><td>Specify style variation of a font</td></tr>
+<tr><td><code>line-height</code></td><td><code>1</code> <code>1.5</code></td><td>Spacing between lines of text</td></tr>
+<tr><td></td></tr>
+<tr><td><code>padding</code></td><td><code>5px</code> <code>1em</code></td><td>Extra space inside element</td></tr>
+<tr><td><code>margin</code></td><td><code>5px</code> <code>1em</code></td><td>Extra space outside element</td></tr>
+<tr><td><code>margin-left</code></td><td><code>5px</code> <code>1em</code></td><td>Just the left margin*</td></tr>
 </tbody>
 </table>
+<p>*<code>margin</code>, <code>padding</code>, <code>border</code> can be applied all the way around an element or just to the <code>-top</code>, <code>-right</code>, <code>-bottom</code>, or <code>-left</code>.</p>
 <h4>Inheritance</h4>
 <p>When a CSS property is applied to an element, it may be applied to the elements nested children as well. This is called <strong>inheritance</strong>.</p>
 <p>In the following example, the color property will be applied to the <code>p</code> element. The <code>strong</code> element’s text will also be red because the color property is inherited.</p>
@@ -250,29 +286,30 @@
 <p>Not all CSS properties are inherited. You can check the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">MDN CSS reference</a> to find out if a property is inherited.</p>
 <h4>Classes</h4>
 <p>Generally it good CSS practice to apply styles broadly. For example, you might make all <code>h1</code>s look a certain way. This leads to shorter, easier to understand CSS and more consistent visual design. In practice, however, you often need to get more specific. You might want a few <code>h1</code>s to be a different color for example.</p>
-<p>You can use HTML and CSS together to create <strong>classes</strong> that let you specify a specific set of elements.</p>
+<p>You can use HTML and CSS together to create and style <strong>classes</strong>. Classes let you specify a specific set of elements.</p>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Apples<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Apples are fruit.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fancy"</span>&gt;</span>Bears<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"important"</span>&gt;</span>Bears<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Apples are animals.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Cake<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fancy"</span>&gt;</span>Cake is delicious.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"important"</span>&gt;</span>Cake is delicious.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 </code></pre>
 <pre><code><span class="hljs-selector-tag">h1</span> {
     <span class="hljs-attribute">color</span>: gray;
 }
-<span class="hljs-selector-class">.fancy</span> {
+<span class="hljs-selector-class">.important</span> {
     <span class="hljs-attribute">color</span>: pink;
 }
 </code></pre>
 <ul>
 <li>In the HTML, a class <strong>attribute</strong> was added to two tags in the HTML.</li>
-<li>In the CSS, a selector starting with <code>.</code> is used to apply a ruleset to elements marked with the <code>fancy</code> class.</li>
+<li>In the CSS, a selector starting with <code>.</code> is used to apply a ruleset to elements marked with the <code>important</code> class.</li>
+<li>Use classes to describe the semantics of items in your document, not how you plan to style them.</li>
 </ul>
 <h4>Specificity</h4>
-<p>It is common that two rulesets will apply to the same element. In the example above, both the <code>h1</code> ruleset and the the <code>.fancy</code> ruleset apply to the “Bears” header. Since both rulesets set the <code>color</code> property, css must choose which property value to use. CSS gives priority to the more <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance">specific</a> selector’s rule. CSS considers class selectors to be more specific than element selectors, so the fancy header ends up pink.</p>
+<p>It is common that two rulesets will apply to the same element. In the example above, both the <code>h1</code> ruleset and the the <code>.important</code> ruleset apply to the “Bears” header. Since both rulesets set the <code>color</code> property, css must choose which property value to use. CSS gives priority to the more <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance">specific</a> selector’s rule. CSS considers class selectors to be more specific than element selectors, so the <code>important</code> header ends up pink.</p>
 <p>Understanding how CSS assigns priority is important as your projects grow more complex. Take a look at some of the linked resources for more detailed information.</p>
 <h3>More Information</h3>
 <ul>
@@ -280,8 +317,16 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">MDN: CSS</a></li>
 </ul>
 <h3>Challenge</h3>
-<p>[Students start with marked up html, add css to match provided rendering]
-[30 min]</p>
+<ul>
+<li>Open the “challenge” link below.</li>
+<li>Add CSS rulesets to tell the browser how to style the html.</li>
+<li>Try to make the rendered HTML match the “goal” link below.</li>
+<li>You will need to CSS properties not listed above.</li>
+<li>You may alter the HTML if you like. For example, it may be helpful to add a <code>class</code> attribute to an element that requires special styling.</li>
+</ul>
+<p><a href="https://jsbin.com/zejuqukara/edit?html,css,output">Challenge</a>
+-&gt;
+<a href="challenges/challenge_css_solution.html">Goal</a></p>
 <h2>Using the Chrome development tools</h2>
 <h3>Learning Objectives</h3>
 <ul>
@@ -298,34 +343,57 @@
 <li><a href="https://developer.chrome.com/devtools">Chrome DevTools Overview</a></li>
 </ul>
 <h3>Challenge</h3>
-<p>[Students answer questions about the semantic structure, class names, style options, etc of popular websites.]
-[Extra: Students change the content and style of popular websites. Checklist of tasks.]
-[15 minutes]</p>
+<ul>
+<li>Answer the questions in the quiz linked below.</li>
+<li>Use the Chrome developer tools to explore the HTML and CSS of the sites mentioned in each question.</li>
+<li>If you have extra time, visit the New York Times website and use the DevTools to alter the headlines and style of the front page.</li>
+</ul>
+<p><a href="https://goo.gl/forms/4dq0j1krdbv1y9tC3">DevTools Quiz</a></p>
 <h2>Using Atom and Working Locally</h2>
 <h3>Learning Objectives</h3>
 <ul>
 <li>Install a text editor</li>
-<li>Text editors vs word processors</li>
 <li>Creating a web page from scratch.</li>
 <li>Viewing a local web page in Chrome.</li>
 </ul>
 <h3>Overview</h3>
+<p>Websites are made out of <code>.html</code>, <code>.css</code>, and <code>.js</code> files. While these are different languages, they are all based on simple text files meant to be written and read in a text editor.</p>
+<p>There are many popular text editors, here are just a few:</p>
 <ul>
-<li>Text editors vs word processors</li>
-<li>Where to get Atom</li>
-<li>Favorite Add ons</li>
-<li>Creating a web page from scratch.</li>
-<li>Viewing a local web page in Chrome.</li>
-<li>Moving to a Local Server (just a heads up)</li>
+<li><a href="https://atom.io/">Atom</a></li>
+<li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
+<li><a href="https://code.visualstudio.com/">VSCode</a></li>
 </ul>
-<h3>More Information</h3>
+<p>I use Atom for small web projects. I find the following Atom add-ons helpful:</p>
 <ul>
-<li>Atom</li>
-<li>Working Locally</li>
+<li>jsformat</li>
+<li>linter</li>
+<li>linter-jshint</li>
+<li>atom-live-server</li>
 </ul>
+<h3>Local Server</h3>
+<p>You won’t need to worry about local servers today, but you might by the end of the semester.</p>
+<p>You can view simple HTML pages by simply opening them in a browser. As you begin to use more Javascript in your pages, you may find that this approach no longer works. This is because browsers impose restriction on what javascript can do from pages that are opened directly.</p>
+<p>To work around these restrictions, it is common to use a local server. A local server is a program that works like a full-blown server, but runs on your local computer. Your web browser can connect to this local server and recieve files just as if they were hosted on a remote server.</p>
 <h3>Challenge</h3>
-<p>[Students create a local stub html file, view in browser, match provided goal]
-[15 min]</p>
+<p>Create a local web project.</p>
+<ul>
+<li>Create a folder on your computer to contain your project.</li>
+<li>Using a text editor, create an <code>index.html</code> file in that folder.</li>
+<li>Copy the HTML template below into your file.</li>
+<li>Open your <code>index.html</code> file in a browser.</li>
+</ul>
+<pre><code class="language-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Hello, HTML!<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello, HTML!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is a basic web page.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
 <h2>Links, Images, Paths</h2>
 <h3>Learning Objectives</h3>
 <ul>

@@ -99,6 +99,7 @@ Here is an example of a very basic HTML web page.
 	<body>
 		<h1>Hello, world.</h1>
         <p>This is a basic web page.</p>
+		<img src="kitten.jpg">
 	</body>
 </html>
 ```
@@ -110,6 +111,7 @@ A few things to note in the above example:
 - Opening tags look like this: `<h1>` and `<body>` and `<p>`
 - Closing tags look like this: `</h1>` and `</body>` and `</p>`
 - Tags can be nested: `<h1>` is  inside `<body>` and `<body>` is inside `<html>`
+- Some tags, such as `<br>` and `<img>`, insert content into a page. Because these tags no not enclose content, they do not have a closing tag.
 
 #### Important HTML Tags
 
@@ -124,6 +126,7 @@ Tag     | Purpose
 `h1`        | Headlines
 `h2`..`h6`  | Less important headlines
 `p`         | Paragraphs
+`br`		| Creates a line break without starting a new paragraph (unpaired)
 |
 `ol`        | A numbered list
 `ul`        | An unnumbered list
@@ -132,6 +135,11 @@ Tag     | Purpose
 `em`        | *emphasized text*
 `strong`    | **strong text**
 `code`      | `code text`
+`blockquote`| Extended quotation
+|
+`a`			| creates a link
+`img`		| inserts an image (unpaired)
+
 
 
 ### Important Note
@@ -142,7 +150,9 @@ In interesting feature of HTML is that browsers will try _very_ hard to show you
 - [MDN: HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
 ### Challenge
-Open the "challenge" link below. Add HTML tags to mark up the semantic structure of the text. Try to make the rendered HTML match the "goal" link below. 
+- Open the "challenge" link below.
+- Add HTML tags to mark up the semantic structure of the text.
+- Try to make the rendered HTML match the "goal" link below.
 
 [Challenge](https://jsbin.com/maronimafi/edit?html,output)
 ->
@@ -189,10 +199,11 @@ Site | Description
 
 
 #### Challenge
-[Part 1: Students complete longer, “open web” quiz. They will be expected to need to search reference sites to find answers. Questions will range from specific to vague, with some demanding specific answers, others requesting links to tutorials on particular layouts, or links to answers to common problems.]
-[Part 2: Students will start with html that needs to be updated to match a provided rendering and must figure out how to do it]
-[20 min]
+- Answer the questions in the quiz linked below.
+- This is an open-web quiz; you may use any website you like to find answers to the quiz questions.
+- If you have extra time, spend some time reading up on topics included in the quiz.
 
+[Finding Answers Quiz](https://goo.gl/forms/3N8oY4Vx0IPILUNK2)
 
 
 
@@ -233,7 +244,24 @@ What it says	| What it looks like 	| What it does
 
 #### CSS Syntax
 
-Here is an example of a CSS **ruleset**. This ruleset tells the browser to make all the `<h1>` elements on the webpage **big** and **red**.
+First, lets look at some css:
+
+```html
+h1 {
+	font-size: 50px;
+	color: red;
+}
+
+h2, h3 {
+	font-size: 25px;
+}
+
+h3 {
+	color: blue;
+}
+```
+
+The example above has three **rulesets**. Lets look at the first one more closely:
 
 ```html
 h1 {
@@ -242,7 +270,7 @@ h1 {
 }
 ```
 
-A few things to note about this ruleset:
+This ruleset tells the browser to make all the `<h1>` elements on the webpage **big** and **red**. A few things to note about rulesets:
 
 - Rulesets begin with a **selector**. The selector above is `h1`. This selector tells css that the following styles should be applied to any `h1` elements on the page.
 - Rulesets may have more than one selector, separated with commas: `h1, h2`
@@ -258,9 +286,17 @@ Tag     | Example Values 			| Purpose
 ---     |  ---						| ---
 `color` 			| `red` `#00FF00` 	| Sets the font color
 `background-color`	| `red` `#00FF00` 	| Sets the background color
+|
 `font-size`  		| `12px` `2em`		| Sets the size of the font
 `font-weight`		| `bold` `normal`	| The font weight
+`font-style`		| `italic` `normal` | Specify style variation of a font
+`line-height`		| `1` `1.5`			| Spacing between lines of text
+|
+`padding`			| `5px` `1em`		| Extra space inside element
+`margin`			| `5px` `1em`		| Extra space outside element
+`margin-left`		| `5px` `1em`		| Just the left margin*
 
+*`margin`, `padding`, `border` can be applied all the way around an element or just to the `-top`, `-right`, `-bottom`, or `-left`.
 
 #### Inheritance
 When a CSS property is applied to an element, it may be applied to the elements nested children as well. This is called **inheritance**.
@@ -280,33 +316,34 @@ Not all CSS properties are inherited. You can check the [MDN CSS reference](http
 #### Classes
 Generally it good CSS practice to apply styles broadly. For example, you might make all `h1`s look a certain way. This leads to shorter, easier to understand CSS and more consistent visual design. In practice, however, you often need to get more specific. You might want a few `h1`s to be a different color for example.
 
-You can use HTML and CSS together to create **classes** that let you specify a specific set of elements.
+You can use HTML and CSS together to create and style **classes**. Classes let you specify a specific set of elements.
 
 ```
 <h1>Apples</h1>
 <p>Apples are fruit.</p>
 
-<h1 class="fancy">Bears</h1>
+<h1 class="important">Bears</h1>
 <p>Apples are animals.</p>
 
 <h1>Cake</h1>
-<p class="fancy">Cake is delicious.</p>
+<p class="important">Cake is delicious.</p>
 ```
 ```
 h1 {
 	color: gray;
 }
-.fancy {
+.important {
 	color: pink;
 }
 ```
 
 - In the HTML, a class **attribute** was added to two tags in the HTML.
-- In the CSS, a selector starting with `.` is used to apply a ruleset to elements marked with the `fancy` class.
+- In the CSS, a selector starting with `.` is used to apply a ruleset to elements marked with the `important` class.
+- Use classes to describe the semantics of items in your document, not how you plan to style them.
 
 #### Specificity
 
-It is common that two rulesets will apply to the same element. In the example above, both the `h1` ruleset and the the `.fancy` ruleset apply to the "Bears" header. Since both rulesets set the `color` property, css must choose which property value to use. CSS gives priority to the more [specific](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance) selector's rule. CSS considers class selectors to be more specific than element selectors, so the fancy header ends up pink.
+It is common that two rulesets will apply to the same element. In the example above, both the `h1` ruleset and the the `.important` ruleset apply to the "Bears" header. Since both rulesets set the `color` property, css must choose which property value to use. CSS gives priority to the more [specific](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance) selector's rule. CSS considers class selectors to be more specific than element selectors, so the `important` header ends up pink.
 
 Understanding how CSS assigns priority is important as your projects grow more complex. Take a look at some of the linked resources for more detailed information.
 
@@ -316,9 +353,16 @@ Understanding how CSS assigns priority is important as your projects grow more c
 - [MDN: CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS)
 
 ### Challenge
-[Students start with marked up html, add css to match provided rendering]
-[30 min]
 
+- Open the "challenge" link below.
+- Add CSS rulesets to tell the browser how to style the html.
+- Try to make the rendered HTML match the "goal" link below.
+- You will need to CSS properties not listed above.
+- You may alter the HTML if you like. For example, it may be helpful to add a `class` attribute to an element that requires special styling.
+
+[Challenge](https://jsbin.com/zejuqukara/edit?html,css,output)
+->
+[Goal](challenges/challenge_css_solution.html)
 
 
 
@@ -350,12 +394,11 @@ You can even add temporary CSS declarations from the DevTools to quickly try out
 - [Chrome DevTools Overview](https://developer.chrome.com/devtools)
 
 ### Challenge
-[Students answer questions about the semantic structure, class names, style options, etc of popular websites.]
-[Extra: Students change the content and style of popular websites. Checklist of tasks.]
-[15 minutes]
+- Answer the questions in the quiz linked below.
+- Use the Chrome developer tools to explore the HTML and CSS of the sites mentioned in each question.
+- If you have extra time, visit the New York Times website and use the DevTools to alter the headlines and style of the front page.
 
-
-
+[DevTools Quiz](https://goo.gl/forms/4dq0j1krdbv1y9tC3)
 
 
 
@@ -366,28 +409,51 @@ You can even add temporary CSS declarations from the DevTools to quickly try out
 
 ### Learning Objectives
 - Install a text editor
-- Text editors vs word processors
 - Creating a web page from scratch.
 - Viewing a local web page in Chrome.
 
 ### Overview
+Websites are made out of `.html`, `.css`, and `.js` files. While these are different languages, they are all based on simple text files meant to be written and read in a text editor.
 
-- Text editors vs word processors
-- Where to get Atom
-- Favorite Add ons
-- Creating a web page from scratch.
-- Viewing a local web page in Chrome.
-- Moving to a Local Server (just a heads up)
+There are many popular text editors, here are just a few:
+- [Atom](https://atom.io/)
+- [Sublime Text](https://www.sublimetext.com/)
+- [VSCode](https://code.visualstudio.com/)
 
-### More Information
+I use Atom for small web projects. I find the following Atom add-ons helpful:
+- jsformat
+- linter
+- linter-jshint
+- atom-live-server
 
-- Atom
-- Working Locally
+### Local Server
+You won't need to worry about local servers today, but you might by the end of the semester.
+
+You can view simple HTML pages by simply opening them in a browser. As you begin to use more Javascript in your pages, you may find that this approach no longer works. This is because browsers impose restriction on what javascript can do from pages that are opened directly.
+
+To work around these restrictions, it is common to use a local server. A local server is a program that works like a full-blown server, but runs on your local computer. Your web browser can connect to this local server and recieve files just as if they were hosted on a remote server.
+
 
 
 ### Challenge
-[Students create a local stub html file, view in browser, match provided goal]
-[15 min]
+Create a local web project.
+- Create a folder on your computer to contain your project.
+- Using a text editor, create an `index.html` file in that folder.
+- Copy the HTML template below into your file.
+- Open your `index.html` file in a browser.
+
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hello, HTML!</title>
+	</head>
+	<body>
+		<h1>Hello, HTML!</h1>
+        <p>This is a basic web page.</p>
+	</body>
+</html>
+```
 
 
 
