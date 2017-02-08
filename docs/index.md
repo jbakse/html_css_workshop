@@ -294,12 +294,13 @@ Tag     | Example Values 			| Purpose
 |
 `padding`			| `5px` `1em`		| Extra space inside element
 `margin`			| `5px` `1em`		| Extra space outside element
-`margin-left`		| `5px` `1em`		| Just the left margin*
+`margin-left`		| `5px` `1em`		| Just the left margin
 
-*`margin`, `padding`, `border` can be applied all the way around an element or just to the `-top`, `-right`, `-bottom`, or `-left`.
+`margin`, `padding`, `border` can be applied all the way around an element or just to the `-top`, `-right`, `-bottom`, or `-left`.
 
 #### Inheritance
-When a CSS property is applied to an element, it may be applied to the elements nested children as well. This is called **inheritance**.
+
+When a CSS property is applied to an element, it may be applied to the element's children as well. This is called **inheritance**.
 
 In the following example, the color property will be applied to the `p` element. The `strong` element's text will also be red because the color property is inherited.
 
@@ -426,7 +427,7 @@ I use Atom for small web projects. I find the following Atom add-ons helpful:
 - linter-jshint
 - atom-live-server
 
-### Local Server
+### Using Local Servers
 You won't need to worry about local servers today, but you might by the end of the semester.
 
 You can view simple HTML pages by simply opening them in a browser. As you begin to use more Javascript in your pages, you may find that this approach no longer works. This is because browsers impose restriction on what javascript can do from pages that are opened directly.
@@ -463,20 +464,100 @@ Create a local web project.
 - How to create hyperlinks
 - Linking to a CSS file
 - How to embed images
-- Understanding relative and absolute paths
+- Understanding relative and absolute URLs
 
 ### Overview
-- How to create hyperlinks
-- Linking to a CSS file
-- How to embed images
-- Understanding relative and absolute paths
+Possibly the most important feature of the WWW is the ability to link resources together. Web pages can direct users to other webpages thorugh hyperlinks, and can embed images, videos, scripts, style sheets, and other assets through linked assets.
+
+Most web pages today are made up of many assets: the `.html` file itself, one or more `.css` files, one or more `.js` files, several `.jpg`, `.gif`, and `.png` files.
+
+The New York Times home pages loads over 200 files.
+
+
+#### Hyperlinks
+[Hyperlinks](https://en.wikipedia.org/wiki/Hyperlink) provide an easy way for site authors to connect their pages other pages. These pages can be part of the same site or part of other sites hosted anywhere in the world.
+
+To create a hyperlink, you use an [anchor tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a). Anchor tags look like this:
+
+```
+<a href="http://google.com">Look it up!</a>
+```
+
+- The opening and closing tags surround the content that the user will click.
+- The `href` attribute contains a *URL* of the asset the link links to.
+
+#### Image Tags
+[Image Tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) let you embed an image in your document.
+
+They look like this:
+
+```
+<img src="kitten.jpg">
+```
+
+
+- `<img>` tags insert content, rather than describe content already on the page. Because of this they do not enclose text and do not need a closing tag.
+- The `src` attribute provides a URL for the image to be embedded.
+
+#### CSS Links
+Usually, CSS rulesets are stored in a seperate `.css` file. To instruct the browser to load and use an external `.css` file, you use a [link tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link).
+
+
+```
+<link rel="stylesheet" href="mystyles.css">
+```
+
+- Generally, you will put link tags in your document's `<head>`
+- The `rel` attribute tells the browser that the linked asset is a CSS file.
+- The `href` attribute provides a URL for the `.css` to be loaded.
+
+
+#### Relative and Absolute URLs
+The `<img>`, `<link>`, or `<a>` tags all require a URL that explains where the linked asset is located. You can include either a complete, absolute URL, or a partial, relative URL. For the examples below, imagine you have `.html` and `.css` files arranged like below, and you want to reference `my_styles.css` from `about_kittens/index.html`.
+
+![structure](structure.png)
+
+- **Absolute** URLs provide a complete resource location, including the host.
+	`http://myserver.com/styles/my_styles.css`
+- **Relative** URLs provide a location relative to the `.html` file in which they are found.
+	`../styles/my_styles.css`
+- A **Root Relative** URLs provide a location relative to the root of the server of the `.html` file in which they are found.
+	`/styles/my_styles.css`
+- Absolute URLs can specify resources on the same server or on other servers.
+- Relative URLs can specify resources only if they are on the same server.
+
+
 
 ### More Information
+- [MDN: What is a URL](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL)
 
 ### Challenge
-[students continue with the html created in previous challenge, adding styles, images, links to match provided goal part 2]
-[30 min]
 
+Create a complete, local web page that includes an `.html` file, a `.css` file, and images.
+
+Get started.
+- Create a folder to contain this project.
+
+Start your HTML
+- Create an empty file called `index.html`
+- Copy the HTML from the solution to the CSS challenge into `index.html`.
+- Make sure you can load your HTML in Chrome.
+
+Start your CSS
+- Create an empty file called `style.css`
+- Copy the CSS from the solution to the CSS challenge into `style.css`.
+- Use a `<link>` tag to include the CSS in your HTML.
+- Make sure your HTML is styled correctly in Chrome.
+
+Add Images
+- Find an image of Deiter Rams. Add it to your web page.
+- Find an image of Charles Eames. Add it to your web page.
+- Make sure the images are displayed correctly in Chrome
+
+Keep working
+- Restyle the page as you like.
+- Add Images
+- Change Content
 
 
 

@@ -272,12 +272,12 @@ h3 {
 <tr><td></td></tr>
 <tr><td><code>padding</code></td><td><code>5px</code> <code>1em</code></td><td>Extra space inside element</td></tr>
 <tr><td><code>margin</code></td><td><code>5px</code> <code>1em</code></td><td>Extra space outside element</td></tr>
-<tr><td><code>margin-left</code></td><td><code>5px</code> <code>1em</code></td><td>Just the left margin*</td></tr>
+<tr><td><code>margin-left</code></td><td><code>5px</code> <code>1em</code></td><td>Just the left margin</td></tr>
 </tbody>
 </table>
-<p>*<code>margin</code>, <code>padding</code>, <code>border</code> can be applied all the way around an element or just to the <code>-top</code>, <code>-right</code>, <code>-bottom</code>, or <code>-left</code>.</p>
+<p><code>margin</code>, <code>padding</code>, <code>border</code> can be applied all the way around an element or just to the <code>-top</code>, <code>-right</code>, <code>-bottom</code>, or <code>-left</code>.</p>
 <h4>Inheritance</h4>
-<p>When a CSS property is applied to an element, it may be applied to the elements nested children as well. This is called <strong>inheritance</strong>.</p>
+<p>When a CSS property is applied to an element, it may be applied to the element’s children as well. This is called <strong>inheritance</strong>.</p>
 <p>In the following example, the color property will be applied to the <code>p</code> element. The <code>strong</code> element’s text will also be red because the color property is inherited.</p>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This paragraph has a <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>bold part<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 </code></pre>
@@ -371,7 +371,7 @@ h3 {
 <li>linter-jshint</li>
 <li>atom-live-server</li>
 </ul>
-<h3>Local Server</h3>
+<h3>Using Local Servers</h3>
 <p>You won’t need to worry about local servers today, but you might by the end of the semester.</p>
 <p>You can view simple HTML pages by simply opening them in a browser. As you begin to use more Javascript in your pages, you may find that this approach no longer works. This is because browsers impose restriction on what javascript can do from pages that are opened directly.</p>
 <p>To work around these restrictions, it is common to use a local server. A local server is a program that works like a full-blown server, but runs on your local computer. Your web browser can connect to this local server and recieve files just as if they were hosted on a remote server.</p>
@@ -400,19 +400,87 @@ h3 {
 <li>How to create hyperlinks</li>
 <li>Linking to a CSS file</li>
 <li>How to embed images</li>
-<li>Understanding relative and absolute paths</li>
+<li>Understanding relative and absolute URLs</li>
 </ul>
 <h3>Overview</h3>
+<p>Possibly the most important feature of the WWW is the ability to link resources together. Web pages can direct users to other webpages thorugh hyperlinks, and can embed images, videos, scripts, style sheets, and other assets through linked assets.</p>
+<p>Most web pages today are made up of many assets: the <code>.html</code> file itself, one or more <code>.css</code> files, one or more <code>.js</code> files, several <code>.jpg</code>, <code>.gif</code>, and <code>.png</code> files.</p>
+<p>The New York Times home pages loads over 200 files.</p>
+<h4>Hyperlinks</h4>
+<p><a href="https://en.wikipedia.org/wiki/Hyperlink">Hyperlinks</a> provide an easy way for site authors to connect their pages other pages. These pages can be part of the same site or part of other sites hosted anywhere in the world.</p>
+<p>To create a hyperlink, you use an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">anchor tag</a>. Anchor tags look like this:</p>
+<pre><code>&lt;<span class="hljs-keyword">a</span> href=<span class="hljs-string">"http://google.com"</span>&gt;Look <span class="hljs-keyword">it</span> up!&lt;/<span class="hljs-keyword">a</span>&gt;
+</code></pre>
 <ul>
-<li>How to create hyperlinks</li>
-<li>Linking to a CSS file</li>
-<li>How to embed images</li>
-<li>Understanding relative and absolute paths</li>
+<li>The opening and closing tags surround the content that the user will click.</li>
+<li>The <code>href</code> attribute contains a <em>URL</em> of the asset the link links to.</li>
+</ul>
+<h4>Image Tags</h4>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">Image Tags</a> let you embed an image in your document.</p>
+<p>They look like this:</p>
+<pre><code>&lt;<span class="hljs-selector-tag">img</span> src=<span class="hljs-string">"kitten.jpg"</span>&gt;
+</code></pre>
+<ul>
+<li><code>&lt;img&gt;</code> tags insert content, rather than describe content already on the page. Because of this they do not enclose text and do not need a closing tag.</li>
+<li>The <code>src</code> attribute provides a URL for the image to be embedded.</li>
+</ul>
+<h4>CSS Links</h4>
+<p>Usually, CSS rulesets are stored in a seperate <code>.css</code> file. To instruct the browser to load and use an external <code>.css</code> file, you use a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link tag</a>.</p>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mystyles.css"</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Generally, you will put link tags in your document’s <code>&lt;head&gt;</code></li>
+<li>The <code>rel</code> attribute tells the browser that the linked asset is a CSS file.</li>
+<li>The <code>href</code> attribute provides a URL for the <code>.css</code> to be loaded.</li>
+</ul>
+<h4>Relative and Absolute URLs</h4>
+<p>The <code>&lt;img&gt;</code>, <code>&lt;link&gt;</code>, or <code>&lt;a&gt;</code> tags all require a URL that explains where the linked asset is located. You can include either a complete, absolute URL, or a partial, relative URL. For the examples below, imagine you have <code>.html</code> and <code>.css</code> files arranged like below, and you want to reference <code>my_styles.css</code> from <code>about_kittens/index.html</code>.</p>
+<p><img src="structure.png" alt="structure"></p>
+<ul>
+<li><strong>Absolute</strong> URLs provide a complete resource location, including the host.
+<code>http://myserver.com/styles/my_styles.css</code></li>
+<li><strong>Relative</strong> URLs provide a location relative to the <code>.html</code> file in which they are found.
+<code>../styles/my_styles.css</code></li>
+<li>A <strong>Root Relative</strong> URLs provide a location relative to the root of the server of the <code>.html</code> file in which they are found.
+<code>/styles/my_styles.css</code></li>
+<li>Absolute URLs can specify resources on the same server or on other servers.</li>
+<li>Relative URLs can specify resources only if they are on the same server.</li>
 </ul>
 <h3>More Information</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL">MDN: What is a URL</a></li>
+</ul>
 <h3>Challenge</h3>
-<p>[students continue with the html created in previous challenge, adding styles, images, links to match provided goal part 2]
-[30 min]</p>
+<p>Create a complete, local web page that includes an <code>.html</code> file, a <code>.css</code> file, and images.</p>
+<p>Get started.</p>
+<ul>
+<li>Create a folder to contain this project.</li>
+</ul>
+<p>Start your HTML</p>
+<ul>
+<li>Create an empty file called <code>index.html</code></li>
+<li>Copy the HTML from the solution to the CSS challenge into <code>index.html</code>.</li>
+<li>Make sure you can load your HTML in Chrome.</li>
+</ul>
+<p>Start your CSS</p>
+<ul>
+<li>Create an empty file called <code>style.css</code></li>
+<li>Copy the CSS from the solution to the CSS challenge into <code>style.css</code>.</li>
+<li>Use a <code>&lt;link&gt;</code> tag to include the CSS in your HTML.</li>
+<li>Make sure your HTML is styled correctly in Chrome.</li>
+</ul>
+<p>Add Images</p>
+<ul>
+<li>Find an image of Deiter Rams. Add it to your web page.</li>
+<li>Find an image of Charles Eames. Add it to your web page.</li>
+<li>Make sure the images are displayed correctly in Chrome</li>
+</ul>
+<p>Keep working</p>
+<ul>
+<li>Restyle the page as you like.</li>
+<li>Add Images</li>
+<li>Change Content</li>
+</ul>
 <style>
     .hljs-tag {
         color: #003399;
