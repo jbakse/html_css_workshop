@@ -50,8 +50,7 @@ If you want to make all the lists on a web page red, you need to use HTML to "ma
 - [HTML5Doctor: Let's Talk about Semantics](http://html5doctor.com/lets-talk-about-semantics/)
 
 ### Challenge
-[students (partners?) highlight content on printouts, label with semantic descriptions]
-[one authentic material, one is what is coming up next]
+Semantically mark up the New York Times.
 [10 min]
 
 
