@@ -7,7 +7,7 @@ config.publicDirectory = "./docs"
 config.sourceDirectory = "./src"
 config.contentDirectory = "./content"
 config.base_url = "/html_css_workshop/"
-config.base_url = "/"
+// config.base_url = "/"
 config.gh_pages_base_url = "/comp_form/"
 
 config.markdown = {

@@ -774,7 +774,6 @@ Github is primarily for sharing your project **source**. Github Pages allows you
 - Choose where your project source is. I usually keep my source in the `master branch /docs folder` folder rather than the root of `master branch`. This lets me keep info I don't want published, like READMEs, in the root.
 - Follow the link to see your published content. It may take some minutes after a push before your changes appear.
 
-
 <style>
     .hljs-tag {
         color: #003399;
