@@ -8,17 +8,21 @@ toc: show
 
 The HTML+CSS Basics Workshop is a one-day introduction to creating web content. This class will focus on practical, technical skills with hands-on challenges and lots of time to practice and ask questions. Topics will include writing basic HTML and CSS, working with images and links, finding answers online, and using the development tools built into chrome.
 
-Time 	| Unit
----		| ---
-10:30	| Semantic Markup: How HTML and CSS work together
-11:00	| HTML: Marking up a web page
-12:15	| Documentation: How to find answers
-*1:00*	| *Lunch*
-1:45	| CSS: Styling a web page
-3:00	| Using the Chrome developer tools
-3:30	| Using Atom and Working Locally
-4:00	| Links, Images, Paths
-*5:15*	| *End of Class*
+Time 		| Unit
+---			| ---
+:30		 	| Semantic Markup: How HTML and CSS work together
+1:15		| HTML: Marking up a web page
+:45			| Documentation: How to find answers
+1:15		| CSS: Styling a web page
+:30 		| Using the Chrome developer tools
+:30			| Using VS Code and Working Locally
+:45			| Links, Images, Paths
+
+<!-- :30			| Mac OS Command Line Basics
+:30			| Git Basics
+:30			| Github
+:30 		| Github Pages -->
+
 
 
 ## Workshop Structure
@@ -114,30 +118,30 @@ A few things to note in the above example:
 
 #### Important HTML Tags
 
-Tag     | Purpose
----     |   ---
-|
-`html`  | wraps the entire document
-`head`  | used to contain information that is not displayed on the web page
-`title` | used to mark text that should be displayed in the document's tab (and bookmarks)
-`body`  | used to mark the main content of the document
-|
-`h1`        | Headlines
-`h2`..`h6`  | Less important headlines
-`p`         | Paragraphs
-`br`		| Creates a line break without starting a new paragraph (unpaired)
-|
-`ol`        | A numbered list
-`ul`        | An unnumbered list
-`li`        | An item in a list
-|
-`em`        | *emphasized text*
-`strong`    | **strong text**
-`code`      | `code text`
-`blockquote`| Extended quotation
-|
-`a`			| creates a link
-`img`		| inserts an image (unpaired)
+| Tag          | Purpose                                                                          |
+| ------------ | -------------------------------------------------------------------------------- |
+|              |
+| `html`       | wraps the entire document                                                        |
+| `head`       | used to contain information that is not displayed on the web page                |
+| `title`      | used to mark text that should be displayed in the document's tab (and bookmarks) |
+| `body`       | used to mark the main content of the document                                    |
+|              |
+| `h1`         | Headlines                                                                        |
+| `h2`..`h6`   | Less important headlines                                                         |
+| `p`          | Paragraphs                                                                       |
+| `br`         | Creates a line break without starting a new paragraph (unpaired)                 |
+|              |
+| `ol`         | A numbered list                                                                  |
+| `ul`         | An unnumbered list                                                               |
+| `li`         | An item in a list                                                                |
+|              |
+| `em`         | *emphasized text*                                                                |
+| `strong`     | **strong text**                                                                  |
+| `code`       | `code text`                                                                      |
+| `blockquote` | Extended quotation                                                               |
+|              |
+| `a`          | creates a link                                                                   |
+| `img`        | inserts an image (unpaired)                                                      |
 
 
 
@@ -186,15 +190,15 @@ Like any skill, you get better at searching for info when you practice.
 - Don't always use google. If you are looking for info on a particular HTML tag, CSS attribute, or JS function, a tool like devdocs.io might be better.
 
 
-#### Good sources of info
+#### Good Sources
 
-Site | Description
---- | ---
-[DevDocs](http://devdocs.io/)                   | Online reference application with info for *many* popular web technologies.
-[Stack Overflow](http://stackoverflow.com/)     | Question and answer site with huge, well-curated database
-[MDN](https://developer.mozilla.org/en-US/)     | Detailed, reliable technical documentation on HTML/CSS/Javascript and other web technologies.
-[HTML5Rocks](https://www.html5rocks.com/en/)    | Tutorials and articles on specific aspects of HTML5
-[CSSTricks](https://css-tricks.com/)            | Tutorials, quick reference, and other resources related to CSS
+| Site                                         | Description                                                                                   |
+| -------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| [DevDocs](http://devdocs.io/)                | Online reference application with info for *many* popular web technologies.                   |
+| [Stack Overflow](http://stackoverflow.com/)  | Question and answer site with huge, well-curated database                                     |
+| [MDN](https://developer.mozilla.org/en-US/)  | Detailed, reliable technical documentation on HTML/CSS/Javascript and other web technologies. |
+| [HTML5Rocks](https://www.html5rocks.com/en/) | Tutorials and articles on specific aspects of HTML5                                           |
+| [CSSTricks](https://css-tricks.com/)         | Tutorials, quick reference, and other resources related to CSS                                |
 
 
 #### Challenge
@@ -281,8 +285,8 @@ This ruleset tells the browser to make all the `<h1>` elements on the webpage **
 
 #### Important CSS Properties
 
-Tag     | Example Values 			| Purpose
----     |  ---						| ---
+| Tag | Example Values | Purpose |
+| --- | -------------- || ---
 `color` 			| `red` `#00FF00` 	| Sets the font color
 `background-color`	| `red` `#00FF00` 	| Sets the background color
 |
@@ -341,9 +345,9 @@ h1 {
 - In the CSS, a selector starting with `.` is used to apply a ruleset to elements marked with the `important` class.
 - Use classes to describe the semantics of items in your document, not how you plan to style them.
 
-#### Specificity
+#### Specificity + The Cascade
 
-It is common that two rulesets will apply to the same element. In the example above, both the `h1` ruleset and the the `.important` ruleset apply to the "Bears" header. Since both rulesets set the `color` property, css must choose which property value to use. CSS gives priority to the more [specific](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance) selector's rule. CSS considers class selectors to be more specific than element selectors, so the `important` header ends up pink.
+It is common that two rulesets will apply to the same element. In the example above, both the `h1` ruleset and the the `.important` ruleset apply to the "Bears" header. Since both rulesets set the `color` property, css must choose which property value to use. The set of rules that determines which rule to apply is called the *cascade*. Crucially, CSS gives priority to the more [specific](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance) selector's rule. CSS considers class selectors to be more specific than element selectors, so the `important` header ends up pink.
 
 Understanding how CSS assigns priority is important as your projects grow more complex. Take a look at some of the linked resources for more detailed information.
 
@@ -405,7 +409,7 @@ You can even add temporary CSS declarations from the DevTools to quickly try out
 
 
 
-## Using Atom and Working Locally
+## Using VS Code and Working Locally
 
 ### Learning Objectives
 - Install a text editor
@@ -420,41 +424,85 @@ There are many popular text editors, here are just a few:
 - [Sublime Text](https://www.sublimetext.com/)
 - [VSCode](https://code.visualstudio.com/)
 
-I use Atom for small web projects. I find the following Atom add-ons helpful:
+I have used all of these editors—and many others—on projects in the past. Lately, I have been using VS Code for small web projects. 
+
+### VS Code
+VS Code is a light- to mid-weight text editor from Microsoft. Its full name is Visual Studio Code, but it is separate software from Visual Studio which is a much more complex editor and IDE. VS Code offers text editing, syntax highlighting, debugging, and Git integration.
+
+
+### Extensions
+VS Code also has a built in Extension manager and many first- and third-party extensions. I suggest you install these extensions right away.
+
+
+| Extension        | Description                                                                                                                                       |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Beautify         | Automatically formats your code. VS Code actually uses `js-beautify` internally, but this extension allows you greater configuration.             |
+| ESLint           | Automatically detect and report common errors in your Javascript.                                                                                 |
+| Live&nbsp;Server | Easily self-host your web projects right from VS Code.                                                                                            |
+| A&nbsp;Keymap    | If you are used to Atom or Sublime, The Atom Keymap or Sublime Text Keymap extensions will remap your keyboard shortcuts to what you are used to. |
+
+### Using VS Code
+
+When you code, you use your text editor a lot; it is a fundamental tool in your kit. It is critical that you understand the core features of your editor and how to use them. The very basics of VS Code are covered [in this short video](https://code.visualstudio.com/docs/introvideos/basics). A complete look at the interface can be found in this [overview](https://code.visualstudio.com/docs/getstarted/userinterface). VS Code also has a pretty neat interactive playground—you can find the link in any new VS Code window—that tours you through features like multi-cursor editing, autocomplete, and refactoring.
+
+The [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) gives you access to many of the actions VS Code can peform for you. You can open the palette with `⇧⌘P` then type in part of the actions name. For example typing in `for` will let you quickly access the "`For`mat Document" action.
+
+
+
+<!-- I find the following Atom add-ons helpful:
 - jsformat
 - linter
 - linter-jshint
-- atom-live-server
+- atom-live-server -->
 
 ### Using Local Servers
-You won't need to worry about local servers today, but you might by the end of the semester.
+You can view simple HTML pages by simply opening the `.html` file in a browser, directly from your local filesystem. As you begin to use more Javascript in your pages, you may find that this approach no longer works. Browsers impose restrictions on what javascript can do from pages that are opened directly from the filesystem.
 
-You can view simple HTML pages by simply opening them in a browser. As you begin to use more Javascript in your pages, you may find that this approach no longer works. This is because browsers impose restriction on what javascript can do from pages that are opened directly.
+Rather than opening your files from the filesystem you can run a local web server, a program that works like a full-blown server, but runs on your local computer. Your web browser can connect to this local server and receive files just as if they were hosted on a remote server.
 
-To work around these restrictions, it is common to use a local server. A local server is a program that works like a full-blown server, but runs on your local computer. Your web browser can connect to this local server and recieve files just as if they were hosted on a remote server.
+The VS Code [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension lets you run a local server very easily, right from VS Code. It also has built in live-reloading: every time you save your work in VS Code your browser will automatically refresh to show you the change.
 
 
+### Challenge: Get Started Working Locally
 
-### Challenge
-Create a local web project.
-- Create a folder on your computer to contain your project.
-- Using a text editor, create an `index.html` file in that folder.
-- Copy the HTML template below into your file.
-- Open your `index.html` file in a browser.
+**Create a Project**
+- Create a folder to contain this project. 
 
-```html
-<!DOCTYPE html>
-<html>
+<div class="callout">
+For this tutorial you might create this folder on your desktop and give it a name like 'html_challenge'. Webpages often include many files html, css, and js files as well as images, videos, and other resources. Naming your files and folders clearly and keeping everything organized is very important. I keep my active projects in <code>~/Documents/Projects</code>.
+</div>
+
+**Start your HTML**
+- Create an empty file called `index.html` in your project folder.
+- Copy the following code into your file and save.
+	```html
+	<!DOCTYPE html>
+	<html>
+
 	<head>
-		<title>Hello, HTML!</title>
+		<meta charset="utf-8" />
+		<title>Page Title</title>
 	</head>
+
 	<body>
 		<h1>Hello, HTML!</h1>
-        <p>This is a basic web page.</p>
 	</body>
-</html>
-```
 
+	</html>
+	```
+- Open `index.html` in Chrome to see it rendered.
+- Add some content to `index.html`, save, and reload in Chrome to see it.
+- Edit, Reload, Repeat. This is the basic editing workflow.
+
+**Use a Live Server**
+- Install the VS Code Live Server extension, quit and reopen VS Code.
+- Open your project folder in VS Code.
+- Click the "Go Live" button in the status bar to launch the local server and open the project in your Browser.
+- Make a change to your HTML and save it. Your browser should auto-reload.
+
+<div class="callout">
+Auto-reloading provides a nice productivity boost. If you arrange your editor and browser side-by-side, you'll be able to see the effect of every change without having to switch between applications. Auto-reload also encourages a habit of saving nearly constantly. If you enable auto-format-on-save you're code will always be cleanly formatted as well.
+</div>
 
 
 ## Links, Images, Paths
@@ -532,34 +580,199 @@ The `<img>`, `<link>`, or `<a>` tags all require a URL that explains where the l
 
 ### Challenge
 
-Create a complete, local web page that includes an `.html` file, a `.css` file, and images.
+Add CSS and Images to your web page.
 
-Get started.
-- Create a folder to contain this project.
 
-Start your HTML
-- Create an empty file called `index.html`
-- Copy the HTML from the solution to the CSS challenge into `index.html`.
-- Make sure you can load your HTML in Chrome.
+**Start your CSS**
+- Create an empty file called `style.css` in your project folder.
+- Copy the following code into your file and save.
+	```
+	h1 {
+		color: red;
+	}
+	```
+- Add a `<link>` tag to your HTML head so that chrome will use your css.
+	```html
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	```
+- Reload the file in Chrome to see it styled.
+- Add some rules to your CSS, save, and reload in Chrome.
 
-Start your CSS
-- Create an empty file called `style.css`
-- Copy the CSS from the solution to the CSS challenge into `style.css`.
-- Use a `<link>` tag to include the CSS in your HTML.
-- Make sure your HTML is styled correctly in Chrome.
+**Add an Image**
+- Get an image.
+- If it is larger than 1024x1024, size it down.
+- Rename the image file something sane.
+- Create a folder in your project folder called `images`.
+- Move your image into `images`.
+- Add an image tag to your html to include your image.
+	```html
+	<img src="images/myimage.jpg" alt="My first image." />
+	```
+- Reload your html in Chrome and make sure the image is displayed.
 
-Add Images
-- Find an image of Deiter Rams. Add it to your web page.
-- Find an image of Charles Eames. Add it to your web page.
-- Make sure the images are displayed correctly in Chrome
 
-Keep working
-- Restyle the page as you like.
+**Keep Working**
+- Restyle the page as you like
 - Add Images
 - Change Content
+- Practice
 
 
 
+
+
+## Mac OS Command Line Basics
+
+### Learning Objectives
+- Introduce Terminal and the CLI 
+- Navigating your files: `pwd`, `ls`, and `cd`
+- Working with files and directories: `less`, `touch`, `rm`, and `mkdir`
+- Running CLI programs: `man`, `open`, `say`
+
+### Overview
+When you boot a computer running Mac OS you are greeted with software called "the finder". This software provides a GUI—graphical user interface—for navigating your filesystem, creating and removing files and folders, and finding and launching applications. 
+
+The command line interface is an alternate interface for controlling your computer. This interface is textual instead of graphical. You type commands to the computer, and the computer responds with formated text. This type of interface can run on very limited computers and was developed before GUIs were possible. They continue to be popular—especially among developers—because using text commands provides powerful affordances that GUIs do not. For example the command `rm *.html` will remove all the files that end in `.html` from the current directory, faster than selecting them in a GUI. 
+
+This guide very quickly introduces some common CLI tasks. Apple has a [command line primer](https://developer.apple.com/library/archive/documentation/OpenSource/Conceptual/ShellScripting/CommandLInePrimer/CommandLine.html) which provides much more information.
+
+
+
+
+### Navigating your Files
+
+Launching Terminal.app creates a new CLI session, sets your working directory, and opens a window with a command line prompt. 
+The working directory is your current directory or folder, the directory that other commands—like `ls`—will perform their work on.
+
+To run a command you type its name onto the prompt and press return or enter.
+
+Command 	| Meaning
+--- 		| ---
+`pwd`		| Print Working Directory. Tells you the path to the current working directory.
+`ls`		| Lists the files and folders in your current working directory in summary format.
+`ls -l`		| Provides a formatted, detailed listing. The `-l` is known as a flag, option, or switch. Flags are used to modify the operation of the command.
+`cd src` 	| Move to the `src` directory in the current directory, if it exists
+`cd ..` 	| Move to the parent directory
+`cd ~` 		| Move to your home directory
+`cd /` 		| Move to your root directory
+
+### Working with Files and Folders
+
+Command 			| Meaning
+--- 				| ---
+`less index.html` 	| Print the content of `index.html` to the CLI.
+`touch index.html` 	| Create a file named `index.html` in the current working directory, if it doesn't already exist.
+`rm index.html` 	| Remove the file named `index.html` from the current working directory, if it exists.
+`mkdir src`			| Create a directory named `src` in the current working directory, if it doesn't already exist.
+`rm -r src`			| Remove the directory named `src` in the current working directory, if it exists.
+
+### Running CLI Programs
+
+The command line isn't limited to working with the files on your hard drive. There are many programs that live within the CLI that you can launch and interact with as well. In fact `pwd`, `ls`, and the other commands above are all examples of CLI programs. CLI programs range from simple utilities like these to full blown games, editors, and other software that doesn't need a GUI.
+
+Command 		| Meaning
+--- 			| ---
+`man ls` 		| `man` opens a manual entry for a CLI program. `man ls` will tell you about `ls`. To exit `man` type `q`.
+`open .` 		| `open` will open a file, directory, or program in the GUI. `open .` will open the current working directory.
+`say "hello"` 	| `say` uses text to speech to read text aloud.
+
+
+
+### More Information
+- [Command Line Crash Course](https://learnpythonthehardway.org/book/appendixa.html)
+
+
+# Git Basics
+
+### Learning Objectives
+- Introduce the basics of version control.
+- Installing Git
+- Creating a git repository.
+- Reviewing pending changes.
+- Adding changes.
+- Committing changes.
+- Reviewing version history.
+
+#### Installing Git
+If you try to run `git` from the Mac OS command line, but don't have it installed, Mac OS will offer to install git and some other developer tools for you.
+
+
+#### Configuration
+Once git is installed you should set your name and email in the git config:
+
+```bash
+git config --global user.name "Grace Hopper"
+git config --global user.email grace@hopper.com
+```
+
+#### Using Git
+Git is a command line tool. You can type commands to git through the terminal app or VS Code's built in terminal. There are also Git GUIs like [Github Desktop](https://desktop.github.com/) that let you control git graphically. These typically rely on the git command line tool under the hood. This guide will introduce the git cli commands.
+
+Command 				| Meaning
+--- 					| ---
+`git` 					| If you call git without any arguments or switches, git will output some help text.
+`git init` 				| Start using git to manage the current working directory. This will create a hidden `.git` directory to manage git information.
+`git status` 			| Show information about the state of the git repo including what files are new/changed.
+`git add index.html`	| Tell git to include the file `index.html` in the next commit. If you don't `add` new/changed files, they won't be included when you commit.
+`git commit -m'custom message'` | Tell git to store a snapshot of your changes. Include a custom message that describes what you changed. 
+`git log` 				| Show the commit history of this repo.
+
+### Resources
+- [Github Git Handbook](https://guides.github.com/introduction/git-handbook/)
+
+# Github
+
+### Learning Objectives
+- Introduce Github
+- Discuss relationship of Github and Git
+- Creating a repo on Github
+- Cloning a repo
+- Pushing changes
+
+### Git vs. Github
+Git and Github are different things created by different teams. Git is a version control system. Github is a hosting platform for sharing and collaborating on git repos. You don't need Github to use Git. Git works fine on its own as a local tool and if you want to publish your repos, you can do it yourself or use another service like Gitlab. Github is a very popular service, though with lots of nice features including robust version comparison, pull requests, issue tracking, and simple web hosting through Github Pages.
+
+### Publishing your Repo
+Once you have a local repo started, you can publish it to Github from the command line. Git is a distributed version control system; it stores a complete history of your project in your local repo and provides tools for you to share changes between your local repo and remote repos. You can create a repo on your local machine and one on Github and `push` and `pull` changes between them. Other people can also `clone` the repo from Github and `push` and `pull` their changes.
+
+- First, log into your Github account and create a new repository. 
+- You'll be given a few options to fill out. 
+	- Choose a sane name
+	- Provide a brief description
+	- Make sure the "Initialize this repository with a README" is **NOT** checked.
+
+<div class="callout">
+You don't want to have Github initialize your repo and add a README.md file, because you already have an initialized repo started on your computer.
+</div>
+
+- When you look at your new repo on Github, you will see instructions for creating a new repo or pushing an existing one from the command line. 
+
+- First, you'll configure your local repo to use Github as the default remote:
+	```
+	git remote add origin https://github.com/<username>/<repoName>.git
+	```
+
+- Then when you want to push your local commits up to Github:
+	```
+	git push -u origin master
+	```
+
+At this point you should be able to create a local webpage, version it with git, and push your commits to Github. Other people can then look at your project source and its history through the Github interface.
+
+# Github Pages
+
+### Learning Objectives
+- Introduce Github Pages
+- Discuss relationship of Github and Github Pages
+- Setting up Github pages for a repo
+- Publishing changes.
+
+Github is primarily for sharing your project **source**. Github Pages allows you to easily publish basic web projects.
+
+- Open your repo settings on Github.
+- Scroll down to the Github Pages settings.
+- Choose where your project source is. I usually keep my source in the `master branch /docs folder` folder rather than the root of `master branch`. This lets me keep info I don't want published, like READMEs, in the root.
+- Follow the link to see your published content. It may take some minutes after a push before your changes appear.
 
 
 <style>
@@ -572,4 +785,13 @@ Keep working
     h2 {
         margin-top: 4em;
     }
+	code {
+		white-space: pre;
+	}
+	.callout {
+		padding: 15px;
+		background: #EFEFEF;
+		border-left: 1px solid red;
+		margin-bottom: 2em;
+	}
 </style>

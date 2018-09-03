@@ -7,6 +7,7 @@ config.publicDirectory = "./docs"
 config.sourceDirectory = "./src"
 config.contentDirectory = "./content"
 config.base_url = "/html_css_workshop/"
+config.base_url = "/"
 config.gh_pages_base_url = "/comp_form/"
 
 config.markdown = {
@@ -51,22 +52,24 @@ var sass = require('gulp-sass');
 ////////////////////////////////////
 // tasks
 
-gulp.task('clean', function(cb) {
+gulp.task('clean', function (cb) {
 	del([config.publicDirectory], cb);
 });
 
 
-gulp.task('copy', function() {
+gulp.task('copy', function () {
 	return gulp.src(config.copy.src)
 		.pipe(changed(config.copy.dest)) // Ignore unchanged files
 		.pipe(gulp.dest(config.copy.dest))
-		.pipe(browserSync.stream());
-		;
+		.pipe(browserSync.stream());;
 });
 
-gulp.task('markdown', function() {
+gulp.task('markdown', function () {
 	return gulp.src(config.markdown.src)
-		.pipe(frontMatter({property: 'frontMatter', remove: true,}))
+		.pipe(frontMatter({
+			property: 'frontMatter',
+			remove: true,
+		}))
 		.pipe(remarkable({
 			preset: 'full',
 			remarkableOptions: {
@@ -81,23 +84,28 @@ gulp.task('markdown', function() {
 		// 	ext: '.html',
 		// 	args: ['--smart']
 		// }))
-		.pipe(wrap({src: config.markdown.template}, {base_url: config.base_url}))
+		.pipe(wrap({
+			src: config.markdown.template
+		}, {
+			base_url: config.base_url
+		}))
 		.pipe(gulp.dest(config.markdown.dest))
-		.pipe(browserSync.stream());
-		;
+		.pipe(browserSync.stream());;
 });
 
 gulp.task('sass', function () {
-  return gulp.src(config.sass.src)
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(config.sass.dest))
-	.pipe(browserSync.reload({stream: true}))
+	return gulp.src(config.sass.src)
+		.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest(config.sass.dest))
+		.pipe(browserSync.reload({
+			stream: true
+		}))
 	// .pipe(browserSync.stream())
 	;
 });
 
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function () {
 	browserSync.init({
 		server: {
 			baseDir: config.publicDirectory
@@ -105,7 +113,7 @@ gulp.task('browser-sync', function() {
 	});
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
 	gulp.watch(config.markdown.watch, ['markdown']);
 	gulp.watch(config.sass.watch, ['sass']);
 	gulp.watch(config.copy.src, ['copy']);

@@ -2,16 +2,16 @@
 <html>
 	<head>
 		<title>HTML+CSS Basics</title>
-		<!-- <link rel="stylesheet" type="text/css" href="/html_css_workshop/styles/bootswatch.css"> -->
-		<link rel="stylesheet" type="text/css" href="/html_css_workshop/styles/reset.css">
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
+		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
 
-		<link rel="stylesheet" type="text/css" href="/html_css_workshop/styles/atelier-health.light.css">
-		<link rel="stylesheet" type="text/css" href="/html_css_workshop/styles/main.css">
+		<link rel="stylesheet" type="text/css" href="/styles/atelier-health.light.css">
+		<link rel="stylesheet" type="text/css" href="/styles/main.css">
 		<script type="text/javascript">
-			var base_url = "/html_css_workshop/";
+			var base_url = "/";
 		</script>
 
-		<link rel="stylesheet" href="/html_css_workshop/tocbot/tocbot.css">
+		<link rel="stylesheet" href="/tocbot/tocbot.css">
 
 	</head>
 	<body id="compform" class="show-toc">
@@ -32,17 +32,19 @@
 <tr><th>Time</th><th>Unit</th></tr>
 </thead>
 <tbody>
-<tr><td>10:30</td><td>Semantic Markup: How HTML and CSS work together</td></tr>
-<tr><td>11:00</td><td>HTML: Marking up a web page</td></tr>
-<tr><td>12:15</td><td>Documentation: How to find answers</td></tr>
-<tr><td><em>1:00</em></td><td><em>Lunch</em></td></tr>
-<tr><td>1:45</td><td>CSS: Styling a web page</td></tr>
-<tr><td>3:00</td><td>Using the Chrome developer tools</td></tr>
-<tr><td>3:30</td><td>Using Atom and Working Locally</td></tr>
-<tr><td>4:00</td><td>Links, Images, Paths</td></tr>
-<tr><td><em>5:15</em></td><td><em>End of Class</em></td></tr>
+<tr><td>:30</td><td>Semantic Markup: How HTML and CSS work together</td></tr>
+<tr><td>1:15</td><td>HTML: Marking up a web page</td></tr>
+<tr><td>:45</td><td>Documentation: How to find answers</td></tr>
+<tr><td>1:15</td><td>CSS: Styling a web page</td></tr>
+<tr><td>:30</td><td>Using the Chrome developer tools</td></tr>
+<tr><td>:30</td><td>Using VS Code and Working Locally</td></tr>
+<tr><td>:45</td><td>Links, Images, Paths</td></tr>
 </tbody>
 </table>
+<!-- :30            | Mac OS Command Line Basics
+:30         | Git Basics
+:30         | Github
+:30         | Github Pages -->
 <h2>Workshop Structure</h2>
 <ul>
 <li>This workshop is divided into several parts. Each part begins with a brief introduction, followed by a hands-on exercise.</li>
@@ -184,7 +186,7 @@
 <li>Most common info can be found quickly. If you are not obviously on the right webpage for your answer, don’t spend time on it. Go back to the search results and pick something else, or try rephrasing your search.</li>
 <li>Don’t always use google. If you are looking for info on a particular HTML tag, CSS attribute, or JS function, a tool like devdocs.io might be better.</li>
 </ul>
-<h4>Good sources of info</h4>
+<h4>Good Sources</h4>
 <table>
 <thead>
 <tr><th>Site</th><th>Description</th></tr>
@@ -256,24 +258,19 @@ h3 {
 <li>… and end with <code>;</code></li>
 </ul>
 <h4>Important CSS Properties</h4>
-<table>
-<thead>
-<tr><th>Tag</th><th>Example Values</th><th>Purpose</th></tr>
-</thead>
-<tbody>
-<tr><td><code>color</code></td><td><code>red</code> <code>#00FF00</code></td><td>Sets the font color</td></tr>
-<tr><td><code>background-color</code></td><td><code>red</code> <code>#00FF00</code></td><td>Sets the background color</td></tr>
-<tr><td></td></tr>
-<tr><td><code>font-size</code></td><td><code>12px</code> <code>2em</code></td><td>Sets the size of the font</td></tr>
-<tr><td><code>font-weight</code></td><td><code>bold</code> <code>normal</code></td><td>The font weight</td></tr>
-<tr><td><code>font-style</code></td><td><code>italic</code> <code>normal</code></td><td>Specify style variation of a font</td></tr>
-<tr><td><code>line-height</code></td><td><code>1</code> <code>1.5</code></td><td>Spacing between lines of text</td></tr>
-<tr><td></td></tr>
-<tr><td><code>padding</code></td><td><code>5px</code> <code>1em</code></td><td>Extra space inside element</td></tr>
-<tr><td><code>margin</code></td><td><code>5px</code> <code>1em</code></td><td>Extra space outside element</td></tr>
-<tr><td><code>margin-left</code></td><td><code>5px</code> <code>1em</code></td><td>Just the left margin</td></tr>
-</tbody>
-</table>
+<p>| Tag | Example Values | Purpose |
+| — | -------------- || —
+<code>color</code>             | <code>red</code> <code>#00FF00</code>   | Sets the font color
+<code>background-color</code>  | <code>red</code> <code>#00FF00</code>   | Sets the background color
+|
+<code>font-size</code>         | <code>12px</code> <code>2em</code>      | Sets the size of the font
+<code>font-weight</code>       | <code>bold</code> <code>normal</code>   | The font weight
+<code>font-style</code>        | <code>italic</code> <code>normal</code> | Specify style variation of a font
+<code>line-height</code>       | <code>1</code> <code>1.5</code>         | Spacing between lines of text
+|
+<code>padding</code>           | <code>5px</code> <code>1em</code>       | Extra space inside element
+<code>margin</code>            | <code>5px</code> <code>1em</code>       | Extra space outside element
+<code>margin-left</code>       | <code>5px</code> <code>1em</code>       | Just the left margin</p>
 <p><code>margin</code>, <code>padding</code>, <code>border</code> can be applied all the way around an element or just to the <code>-top</code>, <code>-right</code>, <code>-bottom</code>, or <code>-left</code>.</p>
 <h4>Inheritance</h4>
 <p>When a CSS property is applied to an element, it may be applied to the element’s children as well. This is called <strong>inheritance</strong>.</p>
@@ -307,8 +304,8 @@ h3 {
 <li>In the CSS, a selector starting with <code>.</code> is used to apply a ruleset to elements marked with the <code>important</code> class.</li>
 <li>Use classes to describe the semantics of items in your document, not how you plan to style them.</li>
 </ul>
-<h4>Specificity</h4>
-<p>It is common that two rulesets will apply to the same element. In the example above, both the <code>h1</code> ruleset and the the <code>.important</code> ruleset apply to the “Bears” header. Since both rulesets set the <code>color</code> property, css must choose which property value to use. CSS gives priority to the more <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance">specific</a> selector’s rule. CSS considers class selectors to be more specific than element selectors, so the <code>important</code> header ends up pink.</p>
+<h4>Specificity + The Cascade</h4>
+<p>It is common that two rulesets will apply to the same element. In the example above, both the <code>h1</code> ruleset and the the <code>.important</code> ruleset apply to the “Bears” header. Since both rulesets set the <code>color</code> property, css must choose which property value to use. The set of rules that determines which rule to apply is called the <em>cascade</em>. Crucially, CSS gives priority to the more <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance">specific</a> selector’s rule. CSS considers class selectors to be more specific than element selectors, so the <code>important</code> header ends up pink.</p>
 <p>Understanding how CSS assigns priority is important as your projects grow more complex. Take a look at some of the linked resources for more detailed information.</p>
 <h3>More Information</h3>
 <ul>
@@ -348,7 +345,7 @@ h3 {
 <li>If you have extra time, visit the New York Times website and use the DevTools to alter the headlines and style of the front page.</li>
 </ul>
 <p><a href="https://goo.gl/forms/4dq0j1krdbv1y9tC3">DevTools Quiz</a></p>
-<h2>Using Atom and Working Locally</h2>
+<h2>Using VS Code and Working Locally</h2>
 <h3>Learning Objectives</h3>
 <ul>
 <li>Install a text editor</li>
@@ -363,36 +360,74 @@ h3 {
 <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
 <li><a href="https://code.visualstudio.com/">VSCode</a></li>
 </ul>
-<p>I use Atom for small web projects. I find the following Atom add-ons helpful:</p>
-<ul>
-<li>jsformat</li>
-<li>linter</li>
-<li>linter-jshint</li>
-<li>atom-live-server</li>
-</ul>
+<p>I have used all of these editors—and many others—on projects in the past. Lately, I have been using VS Code for small web projects.</p>
+<h3>VS Code</h3>
+<p>VS Code is a light- to mid-weight text editor from Microsoft. Its full name is Visual Studio Code, but it is separate software from Visual Studio which is a much more complex editor and IDE. VS Code offers text editing, syntax highlighting, debugging, and Git integration.</p>
+<h3>Extensions</h3>
+<p>VS Code also has a built in Extension manager and many first- and third-party extensions. I suggest you install these extensions right away.</p>
+<table>
+<thead>
+<tr><th>Extension</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Beautify</td><td>Automatically formats your code. VS Code actually uses <code>js-beautify</code> internally, but this extension allows you greater configuration.</td></tr>
+<tr><td>ESLint</td><td>Automatically detect and report common errors in your Javascript.</td></tr>
+<tr><td>Live Server</td><td>Easily self-host your web projects right from VS Code.</td></tr>
+<tr><td>A Keymap</td><td>If you are used to Atom or Sublime, The Atom Keymap or Sublime Text Keymap extensions will remap your keyboard shortcuts to what you are used to.</td></tr>
+</tbody>
+</table>
+<h3>Using VS Code</h3>
+<p>When you code, you use your text editor a lot; it is a fundamental tool in your kit. It is critical that you understand the core features of your editor and how to use them. The very basics of VS Code are covered <a href="https://code.visualstudio.com/docs/introvideos/basics">in this short video</a>. A complete look at the interface can be found in this <a href="https://code.visualstudio.com/docs/getstarted/userinterface">overview</a>. VS Code also has a pretty neat interactive playground—you can find the link in any new VS Code window—that tours you through features like multi-cursor editing, autocomplete, and refactoring.</p>
+<p>The <a href="https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette">Command Palette</a> gives you access to many of the actions VS Code can peform for you. You can open the palette with <code>⇧⌘P</code> then type in part of the actions name. For example typing in <code>for</code> will let you quickly access the &quot;<code>For</code>mat Document&quot; action.</p>
+<!-- I find the following Atom add-ons helpful:
+- jsformat
+- linter
+- linter-jshint
+- atom-live-server -->
 <h3>Using Local Servers</h3>
-<p>You won’t need to worry about local servers today, but you might by the end of the semester.</p>
-<p>You can view simple HTML pages by simply opening them in a browser. As you begin to use more Javascript in your pages, you may find that this approach no longer works. This is because browsers impose restriction on what javascript can do from pages that are opened directly.</p>
-<p>To work around these restrictions, it is common to use a local server. A local server is a program that works like a full-blown server, but runs on your local computer. Your web browser can connect to this local server and recieve files just as if they were hosted on a remote server.</p>
-<h3>Challenge</h3>
-<p>Create a local web project.</p>
+<p>You can view simple HTML pages by simply opening the <code>.html</code> file in a browser, directly from your local filesystem. As you begin to use more Javascript in your pages, you may find that this approach no longer works. Browsers impose restrictions on what javascript can do from pages that are opened directly from the filesystem.</p>
+<p>Rather than opening your files from the filesystem you can run a local web server, a program that works like a full-blown server, but runs on your local computer. Your web browser can connect to this local server and receive files just as if they were hosted on a remote server.</p>
+<p>The VS Code <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a> extension lets you run a local server very easily, right from VS Code. It also has built in live-reloading: every time you save your work in VS Code your browser will automatically refresh to show you the change.</p>
+<h3>Challenge: Get Started Working Locally</h3>
+<p><strong>Create a Project</strong></p>
 <ul>
-<li>Create a folder on your computer to contain your project.</li>
-<li>Using a text editor, create an <code>index.html</code> file in that folder.</li>
-<li>Copy the HTML template below into your file.</li>
-<li>Open your <code>index.html</code> file in a browser.</li>
+<li>Create a folder to contain this project.</li>
 </ul>
+<div class="callout">
+For this tutorial you might create this folder on your desktop and give it a name like 'html_challenge'. Webpages often include many files html, css, and js files as well as images, videos, and other resources. Naming your files and folders clearly and keeping everything organized is very important. I keep my active projects in <code>~/Documents/Projects</code>.
+</div>
+<p><strong>Start your HTML</strong></p>
+<ul>
+<li>Create an empty file called <code>index.html</code> in your project folder.</li>
+<li>Copy the following code into your file and save.
 <pre><code class="language-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Hello, HTML!<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello, HTML!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is a basic web page.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Page Title<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello, HTML!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
-</code></pre>
+</code></pre></li>
+<li>Open <code>index.html</code> in Chrome to see it rendered.</li>
+<li>Add some content to <code>index.html</code>, save, and reload in Chrome to see it.</li>
+<li>Edit, Reload, Repeat. This is the basic editing workflow.</li>
+</ul>
+<p><strong>Use a Live Server</strong></p>
+<ul>
+<li>Install the VS Code Live Server extension, quit and reopen VS Code.</li>
+<li>Open your project folder in VS Code.</li>
+<li>Click the “Go Live” button in the status bar to launch the local server and open the project in your Browser.</li>
+<li>Make a change to your HTML and save it. Your browser should auto-reload.</li>
+</ul>
+<div class="callout">
+Auto-reloading provides a nice productivity boost. If you arrange your editor and browser side-by-side, you'll be able to see the effect of every change without having to switch between applications. Auto-reload also encourages a habit of saving nearly constantly. If you enable auto-format-on-save you're code will always be cleanly formatted as well.
+</div>
 <h2>Links, Images, Paths</h2>
 <h3>Learning Objectives</h3>
 <ul>
@@ -417,7 +452,7 @@ h3 {
 <h4>Image Tags</h4>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">Image Tags</a> let you embed an image in your document.</p>
 <p>They look like this:</p>
-<pre><code>&lt;<span class="hljs-selector-tag">img</span> src=<span class="hljs-string">"kitten.jpg"</span>&gt;
+<pre><code>&lt;img <span class="hljs-attribute">src</span>=<span class="hljs-string">"kitten.jpg"</span>&gt;
 </code></pre>
 <ul>
 <li><code>&lt;img&gt;</code> tags insert content, rather than describe content already on the page. Because of this they do not enclose text and do not need a closing tag.</li>
@@ -425,7 +460,7 @@ h3 {
 </ul>
 <h4>CSS Links</h4>
 <p>Usually, CSS rulesets are stored in a seperate <code>.css</code> file. To instruct the browser to load and use an external <code>.css</code> file, you use a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link tag</a>.</p>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mystyles.css"</span>&gt;</span>
+<pre><code>&lt;link <span class="hljs-attribute">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-string">"mystyles.css"</span>&gt;
 </code></pre>
 <ul>
 <li>Generally, you will put link tags in your document’s <code>&lt;head&gt;</code></li>
@@ -450,35 +485,185 @@ h3 {
 <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL">MDN: What is a URL</a></li>
 </ul>
 <h3>Challenge</h3>
-<p>Create a complete, local web page that includes an <code>.html</code> file, a <code>.css</code> file, and images.</p>
-<p>Get started.</p>
+<p>Add CSS and Images to your web page.</p>
+<p><strong>Start your CSS</strong></p>
 <ul>
-<li>Create a folder to contain this project.</li>
+<li>Create an empty file called <code>style.css</code> in your project folder.</li>
+<li>Copy the following code into your file and save.
+<pre><code><span class="hljs-selector-tag">h1</span> {
+    <span class="hljs-attribute">color</span>: red;
+}
+</code></pre></li>
+<li>Add a <code>&lt;link&gt;</code> tag to your HTML head so that chrome will use your css.
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"style.css"</span> /&gt;</span>
+</code></pre></li>
+<li>Reload the file in Chrome to see it styled.</li>
+<li>Add some rules to your CSS, save, and reload in Chrome.</li>
 </ul>
-<p>Start your HTML</p>
+<p><strong>Add an Image</strong></p>
 <ul>
-<li>Create an empty file called <code>index.html</code></li>
-<li>Copy the HTML from the solution to the CSS challenge into <code>index.html</code>.</li>
-<li>Make sure you can load your HTML in Chrome.</li>
+<li>Get an image.</li>
+<li>If it is larger than 1024x1024, size it down.</li>
+<li>Rename the image file something sane.</li>
+<li>Create a folder in your project folder called <code>images</code>.</li>
+<li>Move your image into <code>images</code>.</li>
+<li>Add an image tag to your html to include your image.
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/myimage.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"My first image."</span> /&gt;</span>
+</code></pre></li>
+<li>Reload your html in Chrome and make sure the image is displayed.</li>
 </ul>
-<p>Start your CSS</p>
+<p><strong>Keep Working</strong></p>
 <ul>
-<li>Create an empty file called <code>style.css</code></li>
-<li>Copy the CSS from the solution to the CSS challenge into <code>style.css</code>.</li>
-<li>Use a <code>&lt;link&gt;</code> tag to include the CSS in your HTML.</li>
-<li>Make sure your HTML is styled correctly in Chrome.</li>
-</ul>
-<p>Add Images</p>
-<ul>
-<li>Find an image of Deiter Rams. Add it to your web page.</li>
-<li>Find an image of Charles Eames. Add it to your web page.</li>
-<li>Make sure the images are displayed correctly in Chrome</li>
-</ul>
-<p>Keep working</p>
-<ul>
-<li>Restyle the page as you like.</li>
+<li>Restyle the page as you like</li>
 <li>Add Images</li>
 <li>Change Content</li>
+<li>Practice</li>
+</ul>
+<h2>Mac OS Command Line Basics</h2>
+<h3>Learning Objectives</h3>
+<ul>
+<li>Introduce Terminal and the CLI</li>
+<li>Navigating your files: <code>pwd</code>, <code>ls</code>, and <code>cd</code></li>
+<li>Working with files and directories: <code>less</code>, <code>touch</code>, <code>rm</code>, and <code>mkdir</code></li>
+<li>Running CLI programs: <code>man</code>, <code>open</code>, <code>say</code></li>
+</ul>
+<h3>Overview</h3>
+<p>When you boot a computer running Mac OS you are greeted with software called &quot;the finder&quot;. This software provides a GUI—graphical user interface—for navigating your filesystem, creating and removing files and folders, and finding and launching applications.</p>
+<p>The command line interface is an alternate interface for controlling your computer. This interface is textual instead of graphical. You type commands to the computer, and the computer responds with formated text. This type of interface can run on very limited computers and was developed before GUIs were possible. They continue to be popular—especially among developers—because using text commands provides powerful affordances that GUIs do not. For example the command <code>rm *.html</code> will remove all the files that end in <code>.html</code> from the current directory, faster than selecting them in a GUI.</p>
+<p>This guide very quickly introduces some common CLI tasks. Apple has a <a href="https://developer.apple.com/library/archive/documentation/OpenSource/Conceptual/ShellScripting/CommandLInePrimer/CommandLine.html">command line primer</a> which provides much more information.</p>
+<h3>Navigating your Files</h3>
+<p>Launching Terminal.app creates a new CLI session, sets your working directory, and opens a window with a command line prompt.
+The working directory is your current directory or folder, the directory that other commands—like <code>ls</code>—will perform their work on.</p>
+<p>To run a command you type its name onto the prompt and press return or enter.</p>
+<table>
+<thead>
+<tr><th>Command</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td><code>pwd</code></td><td>Print Working Directory. Tells you the path to the current working directory.</td></tr>
+<tr><td><code>ls</code></td><td>Lists the files and folders in your current working directory in summary format.</td></tr>
+<tr><td><code>ls -l</code></td><td>Provides a formatted, detailed listing. The <code>-l</code> is known as a flag, option, or switch. Flags are used to modify the operation of the command.</td></tr>
+<tr><td><code>cd src</code></td><td>Move to the <code>src</code> directory in the current directory, if it exists</td></tr>
+<tr><td><code>cd ..</code></td><td>Move to the parent directory</td></tr>
+<tr><td><code>cd ~</code></td><td>Move to your home directory</td></tr>
+<tr><td><code>cd /</code></td><td>Move to your root directory</td></tr>
+</tbody>
+</table>
+<h3>Working with Files and Folders</h3>
+<table>
+<thead>
+<tr><th>Command</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td><code>less index.html</code></td><td>Print the content of <code>index.html</code> to the CLI.</td></tr>
+<tr><td><code>touch index.html</code></td><td>Create a file named <code>index.html</code> in the current working directory, if it doesn’t already exist.</td></tr>
+<tr><td><code>rm index.html</code></td><td>Remove the file named <code>index.html</code> from the current working directory, if it exists.</td></tr>
+<tr><td><code>mkdir src</code></td><td>Create a directory named <code>src</code> in the current working directory, if it doesn’t already exist.</td></tr>
+<tr><td><code>rm -r src</code></td><td>Remove the directory named <code>src</code> in the current working directory, if it exists.</td></tr>
+</tbody>
+</table>
+<h3>Running CLI Programs</h3>
+<p>The command line isn’t limited to working with the files on your hard drive. There are many programs that live within the CLI that you can launch and interact with as well. In fact <code>pwd</code>, <code>ls</code>, and the other commands above are all examples of CLI programs. CLI programs range from simple utilities like these to full blown games, editors, and other software that doesn’t need a GUI.</p>
+<table>
+<thead>
+<tr><th>Command</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td><code>man ls</code></td><td><code>man</code> opens a manual entry for a CLI program. <code>man ls</code> will tell you about <code>ls</code>. To exit <code>man</code> type <code>q</code>.</td></tr>
+<tr><td><code>open .</code></td><td><code>open</code> will open a file, directory, or program in the GUI. <code>open .</code> will open the current working directory.</td></tr>
+<tr><td><code>say &quot;hello&quot;</code></td><td><code>say</code> uses text to speech to read text aloud.</td></tr>
+</tbody>
+</table>
+<h3>More Information</h3>
+<ul>
+<li><a href="https://learnpythonthehardway.org/book/appendixa.html">Command Line Crash Course</a></li>
+</ul>
+<h1>Git Basics</h1>
+<h3>Learning Objectives</h3>
+<ul>
+<li>Introduce the basics of version control.</li>
+<li>Installing Git</li>
+<li>Creating a git repository.</li>
+<li>Reviewing pending changes.</li>
+<li>Adding changes.</li>
+<li>Committing changes.</li>
+<li>Reviewing version history.</li>
+</ul>
+<h4>Installing Git</h4>
+<p>If you try to run <code>git</code> from the Mac OS command line, but don’t have it installed, Mac OS will offer to install git and some other developer tools for you.</p>
+<h4>Configuration</h4>
+<p>Once git is installed you should set your name and email in the git config:</p>
+<pre><code class="language-bash">git config --global user.name <span class="hljs-string">"Grace Hopper"</span>
+git config --global user.email grace@hopper.com
+</code></pre>
+<h4>Using Git</h4>
+<p>Git is a command line tool. You can type commands to git through the terminal app or VS Code’s built in terminal. There are also Git GUIs like <a href="https://desktop.github.com/">Github Desktop</a> that let you control git graphically. These typically rely on the git command line tool under the hood. This guide will introduce the git cli commands.</p>
+<table>
+<thead>
+<tr><th>Command</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td><code>git</code></td><td>If you call git without any arguments or switches, git will output some help text.</td></tr>
+<tr><td><code>git init</code></td><td>Start using git to manage the current working directory. This will create a hidden <code>.git</code> directory to manage git information.</td></tr>
+<tr><td><code>git status</code></td><td>Show information about the state of the git repo including what files are new/changed.</td></tr>
+<tr><td><code>git add index.html</code></td><td>Tell git to include the file <code>index.html</code> in the next commit. If you don’t <code>add</code> new/changed files, they won’t be included when you commit.</td></tr>
+<tr><td><code>git commit -m'custom message'</code></td><td>Tell git to store a snapshot of your changes. Include a custom message that describes what you changed.</td></tr>
+<tr><td><code>git log</code></td><td>Show the commit history of this repo.</td></tr>
+</tbody>
+</table>
+<h3>Resources</h3>
+<ul>
+<li><a href="https://guides.github.com/introduction/git-handbook/">Github Git Handbook</a></li>
+</ul>
+<h1>Github</h1>
+<h3>Learning Objectives</h3>
+<ul>
+<li>Introduce Github</li>
+<li>Discuss relationship of Github and Git</li>
+<li>Creating a repo on Github</li>
+<li>Cloning a repo</li>
+<li>Pushing changes</li>
+</ul>
+<h3>Git vs. Github</h3>
+<p>Git and Github are different things created by different teams. Git is a version control system. Github is a hosting platform for sharing and collaborating on git repos. You don’t need Github to use Git. Git works fine on its own as a local tool and if you want to publish your repos, you can do it yourself or use another service like Gitlab. Github is a very popular service, though with lots of nice features including robust version comparison, pull requests, issue tracking, and simple web hosting through Github Pages.</p>
+<h3>Publishing your Repo</h3>
+<p>Once you have a local repo started, you can publish it to Github from the command line. Git is a distributed version control system; it stores a complete history of your project in your local repo and provides tools for you to share changes between your local repo and remote repos. You can create a repo on your local machine and one on Github and <code>push</code> and <code>pull</code> changes between them. Other people can also <code>clone</code> the repo from Github and <code>push</code> and <code>pull</code> their changes.</p>
+<ul>
+<li>First, log into your Github account and create a new repository.</li>
+<li>You’ll be given a few options to fill out.
+<ul>
+<li>Choose a sane name</li>
+<li>Provide a brief description</li>
+<li>Make sure the “Initialize this repository with a README” is <strong>NOT</strong> checked.</li>
+</ul></li>
+</ul>
+<div class="callout">
+You don't want to have Github initialize your repo and add a README.md file, because you already have an initialized repo started on your computer.
+</div>
+<ul>
+<li><p>When you look at your new repo on Github, you will see instructions for creating a new repo or pushing an existing one from the command line.</p></li>
+<li><p>First, you’ll configure your local repo to use Github as the default remote:</p>
+<pre><code>git remote <span class="hljs-built_in">add</span> origin http<span class="hljs-variable">s:</span>//github.<span class="hljs-keyword">com</span>/<span class="hljs-symbol">&lt;username&gt;</span>/<span class="hljs-symbol">&lt;repoName&gt;</span>.git
+</code></pre></li>
+<li><p>Then when you want to push your local commits up to Github:</p>
+<pre><code>git push -u origin <span class="hljs-keyword">master</span>
+<span class="hljs-title"></span></code></pre></li>
+</ul>
+<p>At this point you should be able to create a local webpage, version it with git, and push your commits to Github. Other people can then look at your project source and its history through the Github interface.</p>
+<h1>Github Pages</h1>
+<h3>Learning Objectives</h3>
+<ul>
+<li>Introduce Github Pages</li>
+<li>Discuss relationship of Github and Github Pages</li>
+<li>Setting up Github pages for a repo</li>
+<li>Publishing changes.</li>
+</ul>
+<p>Github is primarily for sharing your project <strong>source</strong>. Github Pages allows you to easily publish basic web projects.</p>
+<ul>
+<li>Open your repo settings on Github.</li>
+<li>Scroll down to the Github Pages settings.</li>
+<li>Choose where your project source is. I usually keep my source in the <code>master branch /docs folder</code> folder rather than the root of <code>master branch</code>. This lets me keep info I don’t want published, like READMEs, in the root.</li>
+<li>Follow the link to see your published content. It may take some minutes after a push before your changes appear.</li>
 </ul>
 <style>
     .hljs-tag {
@@ -490,14 +675,23 @@ h3 {
     h2 {
         margin-top: 4em;
     }
+    code {
+        white-space: pre;
+    }
+    .callout {
+        padding: 15px;
+        background: #EFEFEF;
+        border-left: 1px solid red;
+        margin-bottom: 2em;
+    }
 </style>
 
 		</div>
 
-		<script type="text/javascript" src="/html_css_workshop/javascript/jquery-2.1.4.min.js"></script>
-		<script type="text/javascript" src="/html_css_workshop/javascript/highlight.pack.js"></script>
-		<script type="text/javascript" src="/html_css_workshop/javascript/p5_example.js"></script>
-		<script src="/html_css_workshop/tocbot/tocbot.js"></script>
+		<script type="text/javascript" src="/javascript/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/javascript/highlight.pack.js"></script>
+		<script type="text/javascript" src="/javascript/p5_example.js"></script>
+		<script src="/tocbot/tocbot.js"></script>
 
 		<script type="text/javascript">
 			$(function () {
