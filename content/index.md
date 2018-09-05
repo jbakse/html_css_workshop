@@ -409,12 +409,12 @@ You can even add temporary CSS declarations from the DevTools to quickly try out
 
 
 
-# Using VS Code and Working Locally
+## Using VS Code and Working Locally
 
 ### Learning Objectives
 - Install a text editor
-- Creating a web page from scratch.
-- Viewing a local web page in Chrome.
+- Create a web page from scratch.
+- View a local web page in Chrome.
 
 ### Overview
 Websites are made out of `.html`, `.css`, and `.js` files. While these are different languages, they are all based on simple text files meant to be written and read in a text editor.
@@ -427,25 +427,25 @@ There are many popular text editors, here are just a few:
 I have used all of these editors—and many others—on projects in the past. Lately, I have been using VS Code for small web projects. 
 
 ### VS Code
-VS Code is a light- to mid-weight text editor from Microsoft. Its full name is Visual Studio Code, but it is separate software from Visual Studio which is a much more complex editor and IDE. VS Code offers text editing, syntax highlighting, debugging, and Git integration.
+VS Code is a light- to mid-weight text editor from Microsoft. Its full name is Visual Studio Code, but it is separate software from Visual Studio, which is a much more complex editor and IDE. VS Code offers text editing, syntax highlighting, debugging, and Git integration.
 
 
 ### Extensions
-VS Code also has a built in Extension manager and many first- and third-party extensions. I suggest you install these extensions right away.
+VS Code also has a built-in Extension manager and many first- and third-party extensions. I suggest you install these extensions right away.
 
 
 | Extension        | Description                                                                                                                                       |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Beautify         | Automatically formats your code. VS Code actually uses `js-beautify` internally, but this extension allows you greater configuration.             |
+| Beautify         | Automatically format your code. VS Code actually uses `js-beautify` internally, but this extension allows you greater configuration.             |
 | ESLint           | Automatically detect and report common errors in your Javascript.                                                                                 |
 | Live&nbsp;Server | Easily self-host your web projects right from VS Code.                                                                                            |
 | A&nbsp;Keymap    | If you are used to Atom or Sublime, The Atom Keymap or Sublime Text Keymap extensions will remap your keyboard shortcuts to what you are used to. |
 
 ### Using VS Code
 
-When you code, you use your text editor a lot; it is a fundamental tool in your kit. It is critical that you understand the core features of your editor and how to use them. The very basics of VS Code are covered [in this short video](https://code.visualstudio.com/docs/introvideos/basics). A complete look at the interface can be found in this [overview](https://code.visualstudio.com/docs/getstarted/userinterface). VS Code also has a pretty neat interactive playground—you can find the link in any new VS Code window—that tours you through features like multi-cursor editing, autocomplete, and refactoring.
+When you code, you use your text editor a lot: it is a fundamental tool in your kit. It is critical that you understand the core features of your editor and how to use them. The very basics of VS Code are covered [in this short video](https://code.visualstudio.com/docs/introvideos/basics). A complete look at the interface can be found in this [overview](https://code.visualstudio.com/docs/getstarted/userinterface). VS Code also has a pretty neat interactive playground—you can find the link in any new VS Code window—that tours you through features like multi-cursor editing, autocomplete, and refactoring.
 
-The [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) gives you access to many of the actions VS Code can peform for you. You can open the palette with `⇧⌘P` then type in part of the actions name. For example typing in `for` will let you quickly access the "`For`mat Document" action.
+The [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) gives you access to many of the actions VS Code can peform for you. You can open the palette with `⇧⌘P` and then type in part of the action's name. For example, typing in `for` will let you quickly access the "_For_ mat Document" action.
 
 
 
@@ -458,7 +458,7 @@ The [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterfac
 ### Using Local Servers
 You can view simple HTML pages by simply opening the `.html` file in a browser, directly from your local filesystem. As you begin to use more Javascript in your pages, you may find that this approach no longer works. Browsers impose restrictions on what javascript can do from pages that are opened directly from the filesystem.
 
-Rather than opening your files from the filesystem you can run a local web server, a program that works like a full-blown server, but runs on your local computer. Your web browser can connect to this local server and receive files just as if they were hosted on a remote server.
+Rather than opening your files from the filesystem you can run a local web server: a program that works like a full-blown server, but runs on your local computer. Your web browser can connect to this local server and receive files just as if they were hosted on a remote server.
 
 The VS Code [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension lets you run a local server very easily, right from VS Code. It also has built in live-reloading: every time you save your work in VS Code your browser will automatically refresh to show you the change.
 
@@ -469,7 +469,7 @@ The VS Code [Live Server](https://marketplace.visualstudio.com/items?itemName=ri
 - Create a folder to contain this project. 
 
 <div class="callout">
-For this tutorial you might create this folder on your desktop and give it a name like 'html_challenge'. Webpages often include many files html, css, and js files as well as images, videos, and other resources. Naming your files and folders clearly and keeping everything organized is very important. I keep my active projects in <code>~/Documents/Projects</code>.
+For this tutorial you might create this folder on your desktop and give it a name like 'html_challenge'. Webpages often include many files: html, css, and js files as well as images, videos, and other resources. Naming your files and folders clearly and keeping everything organized is very important. I keep my active projects in <code>~/Documents/Projects</code>.
 </div>
 
 **Start your HTML**
@@ -501,11 +501,11 @@ For this tutorial you might create this folder on your desktop and give it a nam
 - Make a change to your HTML and save it. Your browser should auto-reload.
 
 <div class="callout">
-Auto-reloading provides a nice productivity boost. If you arrange your editor and browser side-by-side, you'll be able to see the effect of every change without having to switch between applications. Auto-reload also encourages a habit of saving nearly constantly. If you enable auto-format-on-save you're code will always be cleanly formatted as well.
+Auto-reloading provides a nice productivity boost. If you arrange your editor and browser side-by-side, you'll be able to see the effect of every change without having to switch between applications. Auto-reload also encourages a habit of saving nearly constantly. If you enable auto-format-on-save, your code will always be cleanly formatted as well.
 </div>
 
 
-# Links, Images, Paths
+## Links, Images, Paths
 
 ### Learning Objectives
 - How to create hyperlinks
@@ -560,7 +560,7 @@ Usually, CSS rulesets are stored in a seperate `.css` file. To instruct the brow
 
 
 #### Relative and Absolute URLs
-The `<img>`, `<link>`, or `<a>` tags all require a URL that explains where the linked asset is located. You can include either a complete, absolute URL, or a partial, relative URL. For the examples below, imagine you have `.html` and `.css` files arranged like below, and you want to reference `my_styles.css` from `about_kittens/index.html`.
+The `<img>`, `<link>`, or `<a>` tags all require a URL that explains where the linked asset is located. You can include either a complete, absolute URL, or a partial, relative URL. For the examples below, imagine you have `.html` and `.css` files arranged as shown, and you want to reference `my_styles.css` from `about_kittens/index.html`.
 
 ![structure](structure.png)
 
@@ -591,7 +591,7 @@ Add CSS and Images to your web page.
 		color: red;
 	}
 	```
-- Add a `<link>` tag to your HTML head so that chrome will use your css.
+- Add a `<link>` tag to your HTML head so that Chrome will use your css.
 	```html
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	```
@@ -621,7 +621,7 @@ Add CSS and Images to your web page.
 
 
 
-# Mac OS Command Line Basics
+## Mac OS Command Line Basics
 
 ### Learning Objectives
 - Introduce Terminal and the CLI 
@@ -693,11 +693,11 @@ Command 		| Meaning
 - Committing changes.
 - Reviewing version history.
 
-#### Installing Git
+### Installing Git
 If you try to run `git` from the Mac OS command line, but don't have it installed, Mac OS will offer to install git and some other developer tools for you.
 
 
-#### Configuration
+### Configuration
 Once git is installed you should set your name and email in the git config:
 
 ```bash
@@ -705,8 +705,8 @@ git config --global user.name "Grace Hopper"
 git config --global user.email grace@hopper.com
 ```
 
-#### Using Git
-Git is a command line tool. You can type commands to git through the terminal app or VS Code's built in terminal. There are also Git GUIs like [Github Desktop](https://desktop.github.com/) that let you control git graphically. These typically rely on the git command line tool under the hood. This guide will introduce the git cli commands.
+### Using Git
+Git is a command line tool. You can type commands to git through the terminal app or VS Code's built-in terminal. There are also Git GUIs like [Github Desktop](https://desktop.github.com/) that let you control git graphically. These typically rely on the git command line tool under the hood. This guide will introduce the git cli commands.
 
 Command 				| Meaning
 --- 					| ---
@@ -759,6 +759,10 @@ You don't want to have Github initialize your repo and add a README.md file, bec
 
 At this point you should be able to create a local webpage, version it with git, and push your commits to Github. Other people can then look at your project source and its history through the Github interface.
 
+### More Information 
+
+ - [Github Guides](https://guides.github.com/)
+
 # Github Pages
 
 ### Learning Objectives
@@ -767,12 +771,19 @@ At this point you should be able to create a local webpage, version it with git,
 - Setting up Github pages for a repo
 - Publishing changes.
 
+### Overview
+
 Github is primarily for sharing your project **source**. Github Pages allows you to easily publish basic web projects.
 
 - Open your repo settings on Github.
 - Scroll down to the Github Pages settings.
 - Choose where your project source is. I usually keep my source in the `master branch /docs folder` folder rather than the root of `master branch`. This lets me keep info I don't want published, like READMEs, in the root.
 - Follow the link to see your published content. It may take some minutes after a push before your changes appear.
+
+### More Information
+
+- [Github Pages Guide](https://guides.github.com/features/pages/)
+
 
 <style>
     .hljs-tag {
