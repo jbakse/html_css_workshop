@@ -39,12 +39,12 @@
 <tr><td>:30</td><td>Using the Chrome developer tools</td></tr>
 <tr><td>:30</td><td>Using VS Code and Working Locally</td></tr>
 <tr><td>:45</td><td>Links, Images, Paths</td></tr>
+<tr><td>:30</td><td>Mac OS Command Line Basics</td></tr>
+<tr><td>:30</td><td>Git Basics</td></tr>
+<tr><td>:30</td><td>Github</td></tr>
+<tr><td>:30</td><td>Github Pages</td></tr>
 </tbody>
 </table>
-<!-- :30            | Mac OS Command Line Basics
-:30         | Git Basics
-:30         | Github
-:30         | Github Pages -->
 <h2>Workshop Structure</h2>
 <ul>
 <li>This workshop is divided into several parts. Each part begins with a brief introduction, followed by a hands-on exercise.</li>
@@ -349,8 +349,8 @@ h3 {
 <h3>Learning Objectives</h3>
 <ul>
 <li>Install a text editor</li>
-<li>Creating a web page from scratch.</li>
-<li>Viewing a local web page in Chrome.</li>
+<li>Create a web page from scratch.</li>
+<li>View a local web page in Chrome.</li>
 </ul>
 <h3>Overview</h3>
 <p>Websites are made out of <code>.html</code>, <code>.css</code>, and <code>.js</code> files. While these are different languages, they are all based on simple text files meant to be written and read in a text editor.</p>
@@ -362,23 +362,23 @@ h3 {
 </ul>
 <p>I have used all of these editors—and many others—on projects in the past. Lately, I have been using VS Code for small web projects.</p>
 <h3>VS Code</h3>
-<p>VS Code is a light- to mid-weight text editor from Microsoft. Its full name is Visual Studio Code, but it is separate software from Visual Studio which is a much more complex editor and IDE. VS Code offers text editing, syntax highlighting, debugging, and Git integration.</p>
+<p>VS Code is a light- to mid-weight text editor from Microsoft. Its full name is Visual Studio Code, but it is separate software from Visual Studio, which is a much more complex editor and IDE. VS Code offers text editing, syntax highlighting, debugging, and Git integration.</p>
 <h3>Extensions</h3>
-<p>VS Code also has a built in Extension manager and many first- and third-party extensions. I suggest you install these extensions right away.</p>
+<p>VS Code also has a built-in Extension manager and many first- and third-party extensions. I suggest you install these extensions right away.</p>
 <table>
 <thead>
 <tr><th>Extension</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>Beautify</td><td>Automatically formats your code. VS Code actually uses <code>js-beautify</code> internally, but this extension allows you greater configuration.</td></tr>
+<tr><td>Beautify</td><td>Automatically format your code. VS Code actually uses <code>js-beautify</code> internally, but this extension allows you greater configuration.</td></tr>
 <tr><td>ESLint</td><td>Automatically detect and report common errors in your Javascript.</td></tr>
 <tr><td>Live Server</td><td>Easily self-host your web projects right from VS Code.</td></tr>
 <tr><td>A Keymap</td><td>If you are used to Atom or Sublime, The Atom Keymap or Sublime Text Keymap extensions will remap your keyboard shortcuts to what you are used to.</td></tr>
 </tbody>
 </table>
 <h3>Using VS Code</h3>
-<p>When you code, you use your text editor a lot; it is a fundamental tool in your kit. It is critical that you understand the core features of your editor and how to use them. The very basics of VS Code are covered <a href="https://code.visualstudio.com/docs/introvideos/basics">in this short video</a>. A complete look at the interface can be found in this <a href="https://code.visualstudio.com/docs/getstarted/userinterface">overview</a>. VS Code also has a pretty neat interactive playground—you can find the link in any new VS Code window—that tours you through features like multi-cursor editing, autocomplete, and refactoring.</p>
-<p>The <a href="https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette">Command Palette</a> gives you access to many of the actions VS Code can peform for you. You can open the palette with <code>⇧⌘P</code> then type in part of the actions name. For example typing in <code>for</code> will let you quickly access the &quot;<code>For</code>mat Document&quot; action.</p>
+<p>When you code, you use your text editor a lot: it is a fundamental tool in your kit. It is critical that you understand the core features of your editor and how to use them. The very basics of VS Code are covered <a href="https://code.visualstudio.com/docs/introvideos/basics">in this short video</a>. A complete look at the interface can be found in this <a href="https://code.visualstudio.com/docs/getstarted/userinterface">overview</a>. VS Code also has a pretty neat interactive playground—you can find the link in any new VS Code window—that tours you through features like multi-cursor editing, autocomplete, and refactoring.</p>
+<p>The <a href="https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette">Command Palette</a> gives you access to many of the actions VS Code can peform for you. You can open the palette with <code>⇧⌘P</code> and then type in part of the action’s name. For example, typing in <code>for</code> will let you quickly access the &quot;<em>For</em> mat Document&quot; action.</p>
 <!-- I find the following Atom add-ons helpful:
 - jsformat
 - linter
@@ -386,7 +386,7 @@ h3 {
 - atom-live-server -->
 <h3>Using Local Servers</h3>
 <p>You can view simple HTML pages by simply opening the <code>.html</code> file in a browser, directly from your local filesystem. As you begin to use more Javascript in your pages, you may find that this approach no longer works. Browsers impose restrictions on what javascript can do from pages that are opened directly from the filesystem.</p>
-<p>Rather than opening your files from the filesystem you can run a local web server, a program that works like a full-blown server, but runs on your local computer. Your web browser can connect to this local server and receive files just as if they were hosted on a remote server.</p>
+<p>Rather than opening your files from the filesystem you can run a local web server: a program that works like a full-blown server, but runs on your local computer. Your web browser can connect to this local server and receive files just as if they were hosted on a remote server.</p>
 <p>The VS Code <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a> extension lets you run a local server very easily, right from VS Code. It also has built in live-reloading: every time you save your work in VS Code your browser will automatically refresh to show you the change.</p>
 <h3>Challenge: Get Started Working Locally</h3>
 <p><strong>Create a Project</strong></p>
@@ -394,7 +394,7 @@ h3 {
 <li>Create a folder to contain this project.</li>
 </ul>
 <div class="callout">
-For this tutorial you might create this folder on your desktop and give it a name like 'html_challenge'. Webpages often include many files html, css, and js files as well as images, videos, and other resources. Naming your files and folders clearly and keeping everything organized is very important. I keep my active projects in <code>~/Documents/Projects</code>.
+For this tutorial you might create this folder on your desktop and give it a name like 'html_challenge'. Webpages often include many files: html, css, and js files as well as images, videos, and other resources. Naming your files and folders clearly and keeping everything organized is very important. I keep my active projects in <code>~/Documents/Projects</code>.
 </div>
 <p><strong>Start your HTML</strong></p>
 <ul>
@@ -426,7 +426,7 @@ For this tutorial you might create this folder on your desktop and give it a nam
 <li>Make a change to your HTML and save it. Your browser should auto-reload.</li>
 </ul>
 <div class="callout">
-Auto-reloading provides a nice productivity boost. If you arrange your editor and browser side-by-side, you'll be able to see the effect of every change without having to switch between applications. Auto-reload also encourages a habit of saving nearly constantly. If you enable auto-format-on-save you're code will always be cleanly formatted as well.
+Auto-reloading provides a nice productivity boost. If you arrange your editor and browser side-by-side, you'll be able to see the effect of every change without having to switch between applications. Auto-reload also encourages a habit of saving nearly constantly. If you enable auto-format-on-save, your code will always be cleanly formatted as well.
 </div>
 <h2>Links, Images, Paths</h2>
 <h3>Learning Objectives</h3>
@@ -452,7 +452,7 @@ Auto-reloading provides a nice productivity boost. If you arrange your editor an
 <h4>Image Tags</h4>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">Image Tags</a> let you embed an image in your document.</p>
 <p>They look like this:</p>
-<pre><code>&lt;img <span class="hljs-attribute">src</span>=<span class="hljs-string">"kitten.jpg"</span>&gt;
+<pre><code>&lt;<span class="hljs-selector-tag">img</span> src=<span class="hljs-string">"kitten.jpg"</span>&gt;
 </code></pre>
 <ul>
 <li><code>&lt;img&gt;</code> tags insert content, rather than describe content already on the page. Because of this they do not enclose text and do not need a closing tag.</li>
@@ -460,7 +460,7 @@ Auto-reloading provides a nice productivity boost. If you arrange your editor an
 </ul>
 <h4>CSS Links</h4>
 <p>Usually, CSS rulesets are stored in a seperate <code>.css</code> file. To instruct the browser to load and use an external <code>.css</code> file, you use a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link tag</a>.</p>
-<pre><code>&lt;link <span class="hljs-attribute">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-string">"mystyles.css"</span>&gt;
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mystyles.css"</span>&gt;</span>
 </code></pre>
 <ul>
 <li>Generally, you will put link tags in your document’s <code>&lt;head&gt;</code></li>
@@ -468,7 +468,7 @@ Auto-reloading provides a nice productivity boost. If you arrange your editor an
 <li>The <code>href</code> attribute provides a URL for the <code>.css</code> to be loaded.</li>
 </ul>
 <h4>Relative and Absolute URLs</h4>
-<p>The <code>&lt;img&gt;</code>, <code>&lt;link&gt;</code>, or <code>&lt;a&gt;</code> tags all require a URL that explains where the linked asset is located. You can include either a complete, absolute URL, or a partial, relative URL. For the examples below, imagine you have <code>.html</code> and <code>.css</code> files arranged like below, and you want to reference <code>my_styles.css</code> from <code>about_kittens/index.html</code>.</p>
+<p>The <code>&lt;img&gt;</code>, <code>&lt;link&gt;</code>, or <code>&lt;a&gt;</code> tags all require a URL that explains where the linked asset is located. You can include either a complete, absolute URL, or a partial, relative URL. For the examples below, imagine you have <code>.html</code> and <code>.css</code> files arranged as shown, and you want to reference <code>my_styles.css</code> from <code>about_kittens/index.html</code>.</p>
 <p><img src="structure.png" alt="structure"></p>
 <ul>
 <li><strong>Absolute</strong> URLs provide a complete resource location, including the host.
@@ -494,7 +494,7 @@ Auto-reloading provides a nice productivity boost. If you arrange your editor an
     <span class="hljs-attribute">color</span>: red;
 }
 </code></pre></li>
-<li>Add a <code>&lt;link&gt;</code> tag to your HTML head so that chrome will use your css.
+<li>Add a <code>&lt;link&gt;</code> tag to your HTML head so that Chrome will use your css.
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"style.css"</span> /&gt;</span>
 </code></pre></li>
 <li>Reload the file in Chrome to see it styled.</li>
@@ -578,7 +578,7 @@ The working directory is your current directory or folder, the directory that ot
 <ul>
 <li><a href="https://learnpythonthehardway.org/book/appendixa.html">Command Line Crash Course</a></li>
 </ul>
-<h1>Git Basics</h1>
+<h2>Git Basics</h2>
 <h3>Learning Objectives</h3>
 <ul>
 <li>Introduce the basics of version control.</li>
@@ -589,15 +589,15 @@ The working directory is your current directory or folder, the directory that ot
 <li>Committing changes.</li>
 <li>Reviewing version history.</li>
 </ul>
-<h4>Installing Git</h4>
+<h3>Installing Git</h3>
 <p>If you try to run <code>git</code> from the Mac OS command line, but don’t have it installed, Mac OS will offer to install git and some other developer tools for you.</p>
-<h4>Configuration</h4>
+<h3>Configuration</h3>
 <p>Once git is installed you should set your name and email in the git config:</p>
 <pre><code class="language-bash">git config --global user.name <span class="hljs-string">"Grace Hopper"</span>
 git config --global user.email grace@hopper.com
 </code></pre>
-<h4>Using Git</h4>
-<p>Git is a command line tool. You can type commands to git through the terminal app or VS Code’s built in terminal. There are also Git GUIs like <a href="https://desktop.github.com/">Github Desktop</a> that let you control git graphically. These typically rely on the git command line tool under the hood. This guide will introduce the git cli commands.</p>
+<h3>Using Git</h3>
+<p>Git is a command line tool. You can type commands to git through the terminal app or VS Code’s built-in terminal. There are also Git GUIs like <a href="https://desktop.github.com/">Github Desktop</a> that let you control git graphically. These typically rely on the git command line tool under the hood. This guide will introduce the git cli commands.</p>
 <table>
 <thead>
 <tr><th>Command</th><th>Meaning</th></tr>
@@ -615,7 +615,7 @@ git config --global user.email grace@hopper.com
 <ul>
 <li><a href="https://guides.github.com/introduction/git-handbook/">Github Git Handbook</a></li>
 </ul>
-<h1>Github</h1>
+<h2>Github</h2>
 <h3>Learning Objectives</h3>
 <ul>
 <li>Introduce Github</li>
@@ -650,7 +650,11 @@ You don't want to have Github initialize your repo and add a README.md file, bec
 <span class="hljs-title"></span></code></pre></li>
 </ul>
 <p>At this point you should be able to create a local webpage, version it with git, and push your commits to Github. Other people can then look at your project source and its history through the Github interface.</p>
-<h1>Github Pages</h1>
+<h3>More Information</h3>
+<ul>
+<li><a href="https://guides.github.com/">Github Guides</a></li>
+</ul>
+<h2>Github Pages</h2>
 <h3>Learning Objectives</h3>
 <ul>
 <li>Introduce Github Pages</li>
@@ -658,12 +662,17 @@ You don't want to have Github initialize your repo and add a README.md file, bec
 <li>Setting up Github pages for a repo</li>
 <li>Publishing changes.</li>
 </ul>
+<h3>Overview</h3>
 <p>Github is primarily for sharing your project <strong>source</strong>. Github Pages allows you to easily publish basic web projects.</p>
 <ul>
 <li>Open your repo settings on Github.</li>
 <li>Scroll down to the Github Pages settings.</li>
 <li>Choose where your project source is. I usually keep my source in the <code>master branch /docs folder</code> folder rather than the root of <code>master branch</code>. This lets me keep info I don’t want published, like READMEs, in the root.</li>
 <li>Follow the link to see your published content. It may take some minutes after a push before your changes appear.</li>
+</ul>
+<h3>More Information</h3>
+<ul>
+<li><a href="https://guides.github.com/features/pages/">Github Pages Guide</a></li>
 </ul>
 <style>
     .hljs-tag {

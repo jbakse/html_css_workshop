@@ -17,11 +17,10 @@ Time 		| Unit
 :30 		| Using the Chrome developer tools
 :30			| Using VS Code and Working Locally
 :45			| Links, Images, Paths
-
-<!-- :30			| Mac OS Command Line Basics
+:30			| Mac OS Command Line Basics
 :30			| Git Basics
 :30			| Github
-:30 		| Github Pages -->
+:30 		| Github Pages
 
 
 
@@ -436,7 +435,7 @@ VS Code also has a built-in Extension manager and many first- and third-party ex
 
 | Extension        | Description                                                                                                                                       |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Beautify         | Automatically format your code. VS Code actually uses `js-beautify` internally, but this extension allows you greater configuration.             |
+| Beautify         | Automatically format your code. VS Code actually uses `js-beautify` internally, but this extension allows you greater configuration.              |
 | ESLint           | Automatically detect and report common errors in your Javascript.                                                                                 |
 | Live&nbsp;Server | Easily self-host your web projects right from VS Code.                                                                                            |
 | A&nbsp;Keymap    | If you are used to Atom or Sublime, The Atom Keymap or Sublime Text Keymap extensions will remap your keyboard shortcuts to what you are used to. |
@@ -682,7 +681,7 @@ Command 		| Meaning
 - [Command Line Crash Course](https://learnpythonthehardway.org/book/appendixa.html)
 
 
-# Git Basics
+## Git Basics
 
 ### Learning Objectives
 - Introduce the basics of version control.
@@ -720,7 +719,7 @@ Command 				| Meaning
 ### Resources
 - [Github Git Handbook](https://guides.github.com/introduction/git-handbook/)
 
-# Github
+## Github
 
 ### Learning Objectives
 - Introduce Github
@@ -763,7 +762,7 @@ At this point you should be able to create a local webpage, version it with git,
 
  - [Github Guides](https://guides.github.com/)
 
-# Github Pages
+## Github Pages
 
 ### Learning Objectives
 - Introduce Github Pages
