@@ -409,7 +409,7 @@ You can even add temporary CSS declarations from the DevTools to quickly try out
 
 
 
-## Using VS Code and Working Locally
+# Using VS Code and Working Locally
 
 ### Learning Objectives
 - Install a text editor
@@ -505,7 +505,7 @@ Auto-reloading provides a nice productivity boost. If you arrange your editor an
 </div>
 
 
-## Links, Images, Paths
+# Links, Images, Paths
 
 ### Learning Objectives
 - How to create hyperlinks
@@ -621,7 +621,7 @@ Add CSS and Images to your web page.
 
 
 
-## Mac OS Command Line Basics
+# Mac OS Command Line Basics
 
 ### Learning Objectives
 - Introduce Terminal and the CLI 
