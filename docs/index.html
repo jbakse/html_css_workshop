@@ -593,7 +593,8 @@ The working directory is your current directory or folder, the directory that ot
 <p>If you try to run <code>git</code> from the Mac OS command line, but don’t have it installed, Mac OS will offer to install git and some other developer tools for you.</p>
 <h3>Configuration</h3>
 <p>Once git is installed you should set your name and email in the git config:</p>
-<pre><code class="language-bash">git config --global user.name <span class="hljs-string">"Grace Hopper"</span>
+<pre><code class="language-bash">git config <span class="hljs-_">-l</span> --global
+git config --global user.name <span class="hljs-string">"Grace Hopper"</span>
 git config --global user.email grace@hopper.com
 </code></pre>
 <h3>Using Git</h3>

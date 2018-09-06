@@ -700,6 +700,7 @@ If you try to run `git` from the Mac OS command line, but don't have it installe
 Once git is installed you should set your name and email in the git config:
 
 ```bash
+git config -l --global
 git config --global user.name "Grace Hopper"
 git config --global user.email grace@hopper.com
 ```
